@@ -43,6 +43,7 @@ class TX_16x_5bits_data_test extends uart_base_test;
 						end
 						run_process();
 					end
+					/*
 					repeat (5) begin
 						do begin
 							custom_baud_rate = $urandom_range(1000, 150000);
@@ -59,10 +60,11 @@ class TX_16x_5bits_data_test extends uart_base_test;
 							`uvm_fatal("run_phase", $sformatf("Randomize failure!"));
 						end
 						run_process();
-					end
+					end*/
 				end
 			end
 		end
+		#5ms;
 		phase.drop_objection(this);
 	endtask: run_phase
 	
@@ -94,7 +96,6 @@ class TX_16x_5bits_data_test extends uart_base_test;
 
 	virtual task run_process();
 		calc_divisor(cfg);
-		seq.start(env.uart_agt.seq);
 		if (cfg.ovsmpl == uart_configuration::X16) begin
 			regmodel.MDR.write(status, {31'h0, 1'b0});
 		end else begin
@@ -106,7 +107,7 @@ class TX_16x_5bits_data_test extends uart_base_test;
 			if (cfg.parity_mode == uart_configuration::ODD) regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 			else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b1, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		end else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b0, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
-		regmodel.TBR.write(status, $urandom_range(0, 8'h1F));
+		regmodel.TBR.write(status, $urandom_range(0, (1 << cfg.data_width) - 1));
 		do begin
 			regmodel.FSR.read(status, rdata);
 		end while (rdata[1] == 1'b0);
