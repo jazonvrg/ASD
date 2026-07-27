@@ -1,0 +1,4 @@
+  CREATE_STREAM @10000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.uart_agt.seq STREAM:1083}
+  CREATE_STREAM @10000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.uart_agt.seq STREAM:1079}
+  CREATE_STREAM @10000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.uart_agt.seq STREAM:1327}
+  CREATE_STREAM @10000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.uart_agt.seq STREAM:1327}
