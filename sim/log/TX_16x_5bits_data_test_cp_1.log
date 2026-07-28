@@ -1,6 +1,6 @@
 # vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l TX_16x_5bits_data_test_cp_1.log "+UVM_TESTNAME=TX_16x_5bits_data_test_cp" "+UVM_VERBOSITY=UVM_HIGH" 
-# Start time: 21:02:02 on Jul 27,2026
-# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_93220/linux_x86_64_gcc-11/export_tramp.so
+# Start time: 09:49:09 on Jul 28,2026
+# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_60983/linux_x86_64_gcc-11/export_tramp.so
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim-64
 # //  Version 10.6d_1 linux_x86_64 Apr 11 2018
@@ -41,9 +41,9 @@
 # Loading work.uart_receiver(fast)
 # Loading work.uart_interrupt(fast)
 # Loading work.baud_generator(fast)
-# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_93220/linux_x86_64_gcc-5.3.0/exportwrapper.c
-# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_93220/linux_x86_64_gcc-11/exportwrapper.c
-# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_93220/linux_x86_64_gcc-11/vsim_auto_compile.so
+# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_60983/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_60983/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_60983/linux_x86_64_gcc-11/vsim_auto_compile.so
 #  log -r /*
 # run -all
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
@@ -332,5 +332,5 @@
 # 
 # ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
 #    Time: 5010305 ns  Iteration: 68  Instance: /testbench
-# End time: 21:02:06 on Jul 27,2026, Elapsed time: 0:00:04
+# End time: 09:49:12 on Jul 28,2026, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
