@@ -8,7 +8,7 @@ class uart_base_test extends uvm_test;
 	uart_error_catcher err_catcher;
 	uart_reg_block regmodel;
 
-  	time usr_timeout=1s;
+  	time usr_timeout=50s;
 
 	function new(string name = "uart_base_test", uvm_component parent);
 		super.new(name, parent);

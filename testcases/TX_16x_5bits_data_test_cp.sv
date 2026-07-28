@@ -77,7 +77,7 @@ class TX_16x_5bits_data_test_cp extends uart_base_test;
 				38400: cfg.divisor = 163;
 				76800: cfg.divisor = 81;
 				115200: cfg.divisor = 54;
-				default: cfg.divisor = 100000000 / (cfg.baud_rate * cfg.ovsmpl);
+				default: cfg.divisor = 100000000 / (cfg.baud_rate * 16);
 			endcase
 		end else begin
 			case (cfg.baud_rate)
@@ -88,7 +88,7 @@ class TX_16x_5bits_data_test_cp extends uart_base_test;
 				38400: cfg.divisor = 200;
 				76800: cfg.divisor = 100;
 				115200: cfg.divisor = 67;
-				default: cfg.divisor = 100000000 / (cfg.baud_rate * cfg.ovsmpl);
+				default: cfg.divisor = 100000000 / (cfg.baud_rate * 13);
 			endcase
 		end		
 	endfunction: calc_divisor

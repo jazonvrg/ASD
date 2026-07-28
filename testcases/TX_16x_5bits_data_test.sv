@@ -29,7 +29,7 @@ class TX_16x_5bits_data_test extends uart_base_test;
 					$display("============================================================================================================================");
 					$display("=================================================  ### TX UART | 16x  ###  =================================================");
 					$display("============================================================================================================================");
-					foreach(bd_rate[i_bd]) begin
+					/*foreach(bd_rate[i_bd]) begin
 						if (cfg.randomize() with {parity_mode == prt_mode[i_prt]; 
 									  data_width == 5;
                 				                          num_of_stop_bit == stp_bit[i_stp];
@@ -42,11 +42,10 @@ class TX_16x_5bits_data_test extends uart_base_test;
 							`uvm_fatal("run_phase", $sformatf("Randomize failure!"));
 						end
 						run_process();
-					end
-					/*
+					end*/
 					repeat (5) begin
 						do begin
-							custom_baud_rate = $urandom_range(1000, 150000);
+							custom_baud_rate = $urandom_range(118, 6250000);
 						end while (custom_baud_rate inside {bd_rate});
 						if (cfg.randomize() with {parity_mode == prt_mode[i_prt]; 
 									  data_width == 5;
@@ -60,14 +59,13 @@ class TX_16x_5bits_data_test extends uart_base_test;
 							`uvm_fatal("run_phase", $sformatf("Randomize failure!"));
 						end
 						run_process();
-					end*/
+					end
 				end
 			end
 		end
-		#5ms;
 		phase.drop_objection(this);
 	endtask: run_phase
-	
+
 	virtual function void calc_divisor(uart_configuration cfg);
 		if (cfg.ovsmpl == uart_configuration::X16) begin
 			case (cfg.baud_rate)
@@ -78,7 +76,7 @@ class TX_16x_5bits_data_test extends uart_base_test;
 				38400: cfg.divisor = 163;
 				76800: cfg.divisor = 81;
 				115200: cfg.divisor = 54;
-				default: cfg.divisor = 100000000 / (cfg.baud_rate * cfg.ovsmpl);
+				default: cfg.divisor = 100000000 / (cfg.baud_rate * 16);
 			endcase
 		end else begin
 			case (cfg.baud_rate)
@@ -89,10 +87,14 @@ class TX_16x_5bits_data_test extends uart_base_test;
 				38400: cfg.divisor = 200;
 				76800: cfg.divisor = 100;
 				115200: cfg.divisor = 67;
-				default: cfg.divisor = 100000000 / (cfg.baud_rate * cfg.ovsmpl);
+				default: cfg.divisor = 100000000 / (cfg.baud_rate * 13);
 			endcase
 		end		
 	endfunction: calc_divisor
+
+	virtual task wait_time(uart_configuration cfg);
+		#((15.0 / cfg.baud_rate) * 1s);
+	endtask: wait_time
 
 	virtual task run_process();
 		calc_divisor(cfg);
@@ -111,6 +113,7 @@ class TX_16x_5bits_data_test extends uart_base_test;
 		do begin
 			regmodel.FSR.read(status, rdata);
 		end while (rdata[1] == 1'b0);
+		wait_time(cfg);
 	endtask: run_process
 
 endclass

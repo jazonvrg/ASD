@@ -39,7 +39,7 @@ class uart_configuration extends uvm_object;
 	}
 
 	constraint baud_rate_range {
-		baud_rate inside {[2400:115200]};
+		baud_rate inside {[118:6250000]};
 	}
 
 	`uvm_object_utils_begin (uart_configuration)
