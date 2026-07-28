@@ -125,6 +125,7 @@ class RX_16x_5bits_data_test extends uart_base_test;
 		end else begin
 			regmodel.MDR.write(status, {31'h0, 1'b1});
 		end
+		regmodel.LCR.write(status, 32'h0);
 		regmodel.DLL.write(status, {24'h0, cfg.divisor[7:0]});
 		regmodel.DLH.write(status, {24'h0, cfg.divisor[15:8]});
 		if (cfg.parity_mode != uart_configuration::NONE) begin
@@ -141,6 +142,7 @@ class RX_16x_5bits_data_test extends uart_base_test;
 			end
 		end while (rdata[3] == 1'b1);
 		regmodel.RBR.read(status, rdata);
+		wait_time(cfg);
 	endtask: run_process
 
 endclass
