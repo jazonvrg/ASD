@@ -9,3 +9,5 @@
   CREATE_STREAM @10000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.uart_agt.seq STREAM:1241}
   CREATE_STREAM @7010000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.uart_agt.seq STREAM:1241}
   CREATE_STREAM @91000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.uart_agt.seq STREAM:1241}
+  CREATE_STREAM @91000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.uart_agt.seq STREAM:1241}
+  CREATE_STREAM @91000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.uart_agt.seq STREAM:1281}
