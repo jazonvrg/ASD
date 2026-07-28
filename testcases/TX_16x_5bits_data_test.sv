@@ -29,7 +29,7 @@ class TX_16x_5bits_data_test extends uart_base_test;
 					$display("============================================================================================================================");
 					$display("=================================================  ### TX UART | 16x  ###  =================================================");
 					$display("============================================================================================================================");
-					/*foreach(bd_rate[i_bd]) begin
+					foreach(bd_rate[i_bd]) begin
 						if (cfg.randomize() with {parity_mode == prt_mode[i_prt]; 
 									  data_width == 5;
                 				                          num_of_stop_bit == stp_bit[i_stp];
@@ -42,7 +42,7 @@ class TX_16x_5bits_data_test extends uart_base_test;
 							`uvm_fatal("run_phase", $sformatf("Randomize failure!"));
 						end
 						run_process();
-					end*/
+					end
 					repeat (5) begin
 						do begin
 							custom_baud_rate = $urandom_range(118, 6250000);
@@ -93,7 +93,7 @@ class TX_16x_5bits_data_test extends uart_base_test;
 	endfunction: calc_divisor
 
 	virtual task wait_time(uart_configuration cfg);
-		#((15.0 / cfg.baud_rate) * 1s);
+		#(((15000 / cfg.baud_rate) + 1) * 1ms);
 	endtask: wait_time
 
 	virtual task run_process();
@@ -112,6 +112,12 @@ class TX_16x_5bits_data_test extends uart_base_test;
 		regmodel.TBR.write(status, $urandom_range(0, (1 << cfg.data_width) - 1));
 		do begin
 			regmodel.FSR.read(status, rdata);
+			if (rdata[1] == 1'b0) begin
+				case (cfg.ovsmpl)
+					uart_configuration::X16: #(((1000000 / (cfg.baud_rate * 16)) + 1) * 1us);
+					default: #(((1000000 / (cfg.baud_rate * 13)) + 1) * 1us);
+				endcase
+			end
 		end while (rdata[1] == 1'b0);
 		wait_time(cfg);
 	endtask: run_process

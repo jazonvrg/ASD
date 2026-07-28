@@ -24,12 +24,23 @@ package test_pkg;
 
   	// Include your file
 	`include "uart_base_test.sv"
+	
+	// Register
 	`include "register_default_value_test.sv"
 	`include "register_read_write_test.sv"
 	`include "register_reset_test.sv"
 	`include "register_reserved_test.sv"
+
+	// TX - 16x
 	`include "TX_16x_5bits_data_test.sv"
-	`include "TX_16x_5bits_data_test_cp.sv"
+
+	// TX - 13x
+
+	// RX - 16x
+	`include "RX_16x_5bits_data_test.sv"
+	`include "RX_16x_5bits_data_test_cp.sv"
+
+	// RX - 13x
 
 endpackage: test_pkg
 

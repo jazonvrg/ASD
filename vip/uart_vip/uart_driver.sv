@@ -64,7 +64,7 @@ class uart_driver extends uvm_driver #(uart_transaction);
 			if (req.data[i]) begin
 				cnt_HIGH = cnt_HIGH + 1;
 			end
-			$display("%t: [uart_driver] i = %0d, uart_vif.tx = %0b", $time, i, uart_vif.tx);
+//			$display("%t: [uart_driver] i = %0d, uart_vif.tx = %0b", $time, i, uart_vif.tx);
 			baud_period();
 		end
 		// PARITY
