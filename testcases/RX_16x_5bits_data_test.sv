@@ -93,8 +93,30 @@ class RX_16x_5bits_data_test extends uart_base_test;
 	endfunction: calc_divisor
 
 	virtual task wait_time(uart_configuration cfg);
-		#(((15000 / cfg.baud_rate) + 1) * 1ms);
+		int calc_time;
+		calc_time = ((15000 / cfg.baud_rate) + 1);
+		#(calc_time * 1ms);
 	endtask: wait_time
+
+	virtual task CDC_3ff(uart_configuration cfg);
+		int calc_time;
+		if (cfg.ovsmpl == uart_configuration::X16) begin
+			calc_time = (1000000 / (cfg.baud_rate * 16)) + 1;	
+		end else begin
+			calc_time = (1000000 / (cfg.baud_rate * 13)) + 1;	
+		end
+		#(calc_time * 3 * 1us);
+	endtask: CDC_3ff
+
+	virtual task read_limit(uart_configuration cfg);
+		int calc_time;
+		if (cfg.ovsmpl == uart_configuration::X16) begin
+			calc_time = (1000000 / (cfg.baud_rate * 16)) + 1;	
+		end else begin
+			calc_time = (1000000 / (cfg.baud_rate * 13)) + 1;	
+		end
+		#(calc_time * 1us);
+	endtask: read_limit
 
 	virtual task run_process();
 		calc_divisor(cfg);
@@ -109,15 +131,13 @@ class RX_16x_5bits_data_test extends uart_base_test;
 			if (cfg.parity_mode == uart_configuration::ODD) regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 			else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b1, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		end else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b0, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
+		CDC_3ff(cfg);
 		seq.start(env.uart_agt.seq);
 		wait_time(cfg);
 		do begin
 			regmodel.FSR.read(status, rdata);
 			if (rdata[3] == 1'b1) begin
-				case (cfg.ovsmpl)
-					uart_configuration::X16: #(((1000000 / (cfg.baud_rate * 16)) + 1) * 1us);
-					default: #(((1000000 / (cfg.baud_rate * 13)) + 1) * 1us);
-				endcase
+				read_limit(cfg);
 			end
 		end while (rdata[3] == 1'b1);
 		regmodel.RBR.read(status, rdata);

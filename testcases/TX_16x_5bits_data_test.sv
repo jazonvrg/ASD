@@ -93,8 +93,20 @@ class TX_16x_5bits_data_test extends uart_base_test;
 	endfunction: calc_divisor
 
 	virtual task wait_time(uart_configuration cfg);
-		#(((15000 / cfg.baud_rate) + 1) * 1ms);
+		int calc_time;
+		calc_time = ((15000 / cfg.baud_rate) + 1);
+		#(calc_time * 1ms);
 	endtask: wait_time
+	
+	virtual task read_limit(uart_configuration cfg);
+		int calc_time;
+		if (cfg.ovsmpl == uart_configuration::X16) begin
+			calc_time = (1000000 / (cfg.baud_rate * 16)) + 1;	
+		end else begin
+			calc_time = (1000000 / (cfg.baud_rate * 13)) + 1;	
+		end
+		#(calc_time * 1us);
+	endtask: read_limit
 
 	virtual task run_process();
 		calc_divisor(cfg);
@@ -113,10 +125,7 @@ class TX_16x_5bits_data_test extends uart_base_test;
 		do begin
 			regmodel.FSR.read(status, rdata);
 			if (rdata[1] == 1'b0) begin
-				case (cfg.ovsmpl)
-					uart_configuration::X16: #(((1000000 / (cfg.baud_rate * 16)) + 1) * 1us);
-					default: #(((1000000 / (cfg.baud_rate * 13)) + 1) * 1us);
-				endcase
+				read_limit(cfg);
 			end
 		end while (rdata[1] == 1'b0);
 		wait_time(cfg);
