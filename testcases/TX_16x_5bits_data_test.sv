@@ -115,12 +115,14 @@ class TX_16x_5bits_data_test extends uart_base_test;
 		end else begin
 			regmodel.MDR.write(status, {31'h0, 1'b1});
 		end
+		regmodel.LCR.write(status, 32'h0);
 		regmodel.DLL.write(status, {24'h0, cfg.divisor[7:0]});
 		regmodel.DLH.write(status, {24'h0, cfg.divisor[15:8]});
 		if (cfg.parity_mode != uart_configuration::NONE) begin
 			if (cfg.parity_mode == uart_configuration::ODD) regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 			else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b1, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		end else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b0, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
+		wait_time(cfg);
 		regmodel.TBR.write(status, $urandom_range(0, (1 << cfg.data_width) - 1));
 		do begin
 			regmodel.FSR.read(status, rdata);

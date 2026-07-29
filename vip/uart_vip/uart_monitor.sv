@@ -93,6 +93,20 @@ class uart_monitor extends uvm_monitor;
 			end
 		endcase	
 		if (cfg.parity_mode != uart_configuration::NONE) begin
+			if (cfg.parity_error == uart_configuration::ERROR) begin
+				exp = ~exp;
+			end
+		end
+		if (cfg.parity_mode != uart_configuration::NONE) begin
+			act = uart_vif.tx;
+			if (act != exp) begin
+				tx.parity = 1'b1;
+			end else begin
+				tx.parity = 1'b0;
+			end
+			baud_period(1);
+		end
+		/*if (cfg.parity_mode != uart_configuration::NONE) begin
 			act = uart_vif.tx;
 			if (cfg.parity_error == uart_configuration::ERROR) begin
 				if (act != exp) begin
@@ -110,7 +124,7 @@ class uart_monitor extends uvm_monitor;
 //				`uvm_info("thread_tx NORMAL", $sformatf("%s", cfg.parity_error.name()), UVM_LOW); 
 			end
 			baud_period(1);
-		end
+		end*/
 		// STOP
 		for(int i = 0; i < cfg.num_of_stop_bit; i = i + 1) begin 
 			baud_period(1);
@@ -154,8 +168,22 @@ class uart_monitor extends uvm_monitor;
 			end
 			default: begin
 			end
-		endcase	
+		endcase
 		if (cfg.parity_mode != uart_configuration::NONE) begin
+			if (cfg.parity_error == uart_configuration::ERROR) begin
+				exp = ~exp;
+			end
+		end
+		if (cfg.parity_mode != uart_configuration::NONE) begin
+			exp = uart_vif.rx;
+			if (act != exp) begin
+				rx.parity = 1'b1;
+			end else begin
+				rx.parity = 1'b0;
+			end
+			baud_period(1);
+		end
+		/*if (cfg.parity_mode != uart_configuration::NONE) begin
 			act = uart_vif.rx;
 			if (cfg.parity_error == uart_configuration::ERROR) begin
 				if (act != exp) begin
@@ -173,7 +201,7 @@ class uart_monitor extends uvm_monitor;
 //				`uvm_info("thread_rx NORMAL", $sformatf("%s", cfg.parity_error.name()), UVM_LOW); 
 			end
 			baud_period(1);
-		end
+		end*/
 		// STOP
 		for(int i = 0; i < cfg.num_of_stop_bit; i = i + 1) begin 
 			baud_period(1);

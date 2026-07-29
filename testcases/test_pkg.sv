@@ -38,9 +38,11 @@ package test_pkg;
 
 	// RX - 16x
 	`include "RX_16x_5bits_data_test.sv"
-	`include "RX_16x_5bits_data_test_cp.sv"
 
 	// RX - 13x
+
+	// Interrupt
+	`include "error_parity_test.sv"
 
 endpackage: test_pkg
 
