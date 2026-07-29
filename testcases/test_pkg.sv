@@ -43,6 +43,7 @@ package test_pkg;
 
 	// Interrupt
 	`include "error_parity_test.sv"
+	`include "error_parity_test_cp.sv"
 
 endpackage: test_pkg
 

@@ -100,7 +100,17 @@ class error_parity_test extends uart_base_test;
 		calc_time = ((15000 / cfg.baud_rate) + 1);
 		#(calc_time * 1ms);
 	endtask: wait_time
-	
+
+	virtual task CDC_3ff(uart_configuration cfg);
+		int calc_time;
+		if (cfg.ovsmpl == uart_configuration::X16) begin
+			calc_time = (1000000 / (cfg.baud_rate * 16)) + 1;	
+		end else begin
+			calc_time = (1000000 / (cfg.baud_rate * 13)) + 1;	
+		end
+		#(calc_time * 3 * 1us);
+	endtask: CDC_3ff
+
 	virtual task read_limit(uart_configuration cfg);
 		int calc_time;
 		if (cfg.ovsmpl == uart_configuration::X16) begin
@@ -126,14 +136,10 @@ class error_parity_test extends uart_base_test;
 			else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b1, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		end else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b0, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		wait_time(cfg);
-		regmodel.TBR.write(status, $urandom_range(0, (1 << cfg.data_width) - 1));
-		do begin
-			regmodel.FSR.read(status, rdata);
-			if (rdata[1] == 1'b0) begin
-				read_limit(cfg);
-			end
-		end while (rdata[1] == 1'b0);
+		seq.start(env.uart_agt.seq);
+		env.scb.selection = 4;	
 		wait_time(cfg);
+		regmodel.FSR.read(status, rdata);
 	endtask: run_process
 
 endclass

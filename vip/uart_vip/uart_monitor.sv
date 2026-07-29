@@ -9,7 +9,6 @@ class uart_monitor extends uvm_monitor;
 	uvm_analysis_port #(uart_transaction) uart_observed_port_rx;
 	int cnt_HIGH_tx, cnt_HIGH_rx;
 	int n, len;
-	logic act, exp;
 
 	function new(string name = "uart_monitor", uvm_component parent);
 		super.new(name, parent);
@@ -56,6 +55,7 @@ class uart_monitor extends uvm_monitor;
 	endtask
 
 	virtual task thread_tx();
+		logic act, exp;
 		// SETUP
 		tx = uart_transaction::type_id::create("tx");
 		cnt_HIGH_tx = 0;
@@ -93,11 +93,6 @@ class uart_monitor extends uvm_monitor;
 			end
 		endcase	
 		if (cfg.parity_mode != uart_configuration::NONE) begin
-			if (cfg.parity_error == uart_configuration::ERROR) begin
-				exp = ~exp;
-			end
-		end
-		if (cfg.parity_mode != uart_configuration::NONE) begin
 			act = uart_vif.tx;
 			if (act != exp) begin
 				tx.parity = 1'b1;
@@ -133,6 +128,7 @@ class uart_monitor extends uvm_monitor;
 	endtask: thread_tx
 	
 	virtual task thread_rx();
+		logic act, exp;
 		// SETUP
 		rx = uart_transaction::type_id::create("rx");
 		cnt_HIGH_rx = 0;
@@ -170,12 +166,7 @@ class uart_monitor extends uvm_monitor;
 			end
 		endcase
 		if (cfg.parity_mode != uart_configuration::NONE) begin
-			if (cfg.parity_error == uart_configuration::ERROR) begin
-				exp = ~exp;
-			end
-		end
-		if (cfg.parity_mode != uart_configuration::NONE) begin
-			exp = uart_vif.rx;
+			act = uart_vif.rx;
 			if (act != exp) begin
 				rx.parity = 1'b1;
 			end else begin

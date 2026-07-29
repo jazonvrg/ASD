@@ -1,0 +1,10 @@
+# vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l error_parity_error_cp_1.log "+UVM_TESTNAME=error_parity_error_cp" "+UVM_VERBOSITY=UVM_HIGH" 
+# Start time: 14:41:47 on Jul 29,2026
+# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_87947/linux_x86_64_gcc-11/export_tramp.so
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Break key hit
+# ** Fatal: (SIGINT) Compile interrupted.
+# ** Error: ../rtl/baud_generator.vp(1): Vopt Compiler exiting
+# Error loading design
+# End time: 14:41:48 on Jul 29,2026, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
