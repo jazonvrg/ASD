@@ -43,7 +43,12 @@ package test_pkg;
 
 	// Interrupt
 	`include "error_parity_test.sv"
-	`include "error_parity_test_cp.sv"
+	`include "normal_parity_test.sv"
+	
+	`include "empty_rx_fifo_test.sv"
+	`include "full_rx_fifo_test.sv"
+	
+	`include "empty_tx_fifo_test.sv"
 
 endpackage: test_pkg
 
