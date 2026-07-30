@@ -1,6 +1,6 @@
 # vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l error_parity_test_cp_1.log "+UVM_TESTNAME=error_parity_test_cp" "+UVM_VERBOSITY=UVM_HIGH" 
-# Start time: 14:52:22 on Jul 29,2026
-# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_112493/linux_x86_64_gcc-11/export_tramp.so
+# Start time: 15:20:27 on Jul 29,2026
+# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_15252/linux_x86_64_gcc-11/export_tramp.so
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim-64
 # //  Version 10.6d_1 linux_x86_64 Apr 11 2018
@@ -41,9 +41,9 @@
 # Loading work.uart_receiver(fast)
 # Loading work.uart_interrupt(fast)
 # Loading work.baud_generator(fast)
-# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_112493/linux_x86_64_gcc-5.3.0/exportwrapper.c
-# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_112493/linux_x86_64_gcc-11/exportwrapper.c
-# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_112493/linux_x86_64_gcc-11/vsim_auto_compile.so
+# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_15252/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_15252/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_15252/linux_x86_64_gcc-11/vsim_auto_compile.so
 #  log -r /*
 # run -all
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
@@ -141,7 +141,7 @@
 # ============================================================================================================================
 # =================================================  ### ERROR PARITY  ###  ==================================================
 # ============================================================================================================================
-# UVM_INFO ./../testcases/error_parity_test_cp.sv(42) @ 10000: uvm_test_top [run_phase] Configuration randomize is: 
+# UVM_INFO ./../testcases/error_parity_test_cp.sv(43) @ 10000: uvm_test_top [run_phase] Configuration randomize is: 
 # ----------------------------------------------------
 # Name               Type                 Size  Value 
 # ----------------------------------------------------
@@ -292,7 +292,8 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 17343000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h2
 # UVM_INFO ./../tb/uart_scoreboard.sv(94) @ 17343000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
 # ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(101) @ 17343000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# UVM_INFO ./../vip/uart_vip/uart_error_catcher.sv(17) @ 17343000: uvm_test_top.env.scb [REPORT CATCHER] Demoted below error message: FAILED! Signal is not matching. Exp: 1, Act: 0
+# UVM_INFO ./../tb/uart_scoreboard.sv(103) @ 17343000: uvm_test_top.env.scb [uart_scoreboard] FAILED! Signal is not matching. Exp: 1, Act: 0
 # ============================================================================================================================
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 17343000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x2, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO @ 17343000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=2
@@ -309,7 +310,7 @@
 # 
 # 
 # Number of demoted UVM_FATAL reports  :    0
-# Number of demoted UVM_ERROR reports  :    0
+# Number of demoted UVM_ERROR reports  :    1
 # Number of demoted UVM_WARNING reports:    0
 # Number of caught UVM_FATAL reports   :    0
 # Number of caught UVM_ERROR reports   :    0
@@ -319,13 +320,14 @@
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   82
+# UVM_INFO :   83
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [NO_DPI_TSTNAME]     1
 # [REG_PREDICT]     6
+# [REPORT CATCHER]     1
 # [RNTST]     1
 # [RegModel]     6
 # [TEST_DONE]     1
@@ -349,5 +351,5 @@
 # 
 # ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
 #    Time: 17343425 ns  Iteration: 70  Instance: /testbench
-# End time: 14:52:27 on Jul 29,2026, Elapsed time: 0:00:05
+# End time: 15:20:31 on Jul 29,2026, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
