@@ -22,7 +22,7 @@ class error_parity_test extends uart_base_test;
 
 	virtual task run_phase(uvm_phase phase);
 		phase.raise_objection(this);
-		env.scb.selection = 5;	
+		//env.scb.selection = 5;	
 		reset();
 		seq = uart_sequence::type_id::create("seq");
 		foreach(prt_mode[i_prt]) begin
@@ -136,6 +136,7 @@ class error_parity_test extends uart_base_test;
 		seq.start(env.uart_agt.seq);
 		wait_monitor(cfg);
 		regmodel.FSR.read(status, rdata);
+		env.scb.error_parity_compare(rdata);
 	endtask: run_process
 
 endclass
