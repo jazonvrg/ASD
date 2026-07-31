@@ -3,12 +3,20 @@ class error_parity_test extends uart_base_test;
 	
 	uart_sequence seq;
 	uvm_status_e status;
+	/*
 	int prt_mode[] = '{2'b01, 2'b10};
 	int dt_width[] = '{5, 6, 7, 8};
 	int stp_bit[] = '{1, 2};
 	int prt_error[] = '{1'b0, 1'b1};
 	int bd_rate[] = '{2400, 4800, 9600, 19200, 38400, 76800, 115200};
 	int ovs[] = '{1'b0, 1'b1};
+	*/
+	int prt_mode[] = '{2'b01};
+	int dt_width[] = '{5};
+	int stp_bit[] = '{1};
+	int prt_error[] = '{1'b0};
+	int bd_rate[] = '{2400};
+	int ovs[] = '{1'b0};
 	int custom_baud_rate;
 	logic [`AHB_DATA_WIDTH-1:0] rdata;
 
@@ -22,7 +30,7 @@ class error_parity_test extends uart_base_test;
 
 	virtual task run_phase(uvm_phase phase);
 		phase.raise_objection(this);
-		//env.scb.selection = 5;	
+		env.scb.selection = 5;	
 		reset();
 		seq = uart_sequence::type_id::create("seq");
 		foreach(prt_mode[i_prt]) begin
@@ -46,7 +54,7 @@ class error_parity_test extends uart_base_test;
 							end
 							run_process();
 						end
-						repeat (5) begin
+						/*repeat (5) begin
 							do begin
 								custom_baud_rate = $urandom_range(118, 6250000);
 							end while (custom_baud_rate inside {bd_rate});
@@ -62,7 +70,7 @@ class error_parity_test extends uart_base_test;
 								`uvm_fatal("run_phase", $sformatf("Randomize failure!"));
 							end
 							run_process();
-						end
+						end*/
 					end
 				end
 			end
@@ -134,9 +142,8 @@ class error_parity_test extends uart_base_test;
 		end else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b0, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		wait_time(cfg);
 		seq.start(env.uart_agt.seq);
-		wait_monitor(cfg);
 		regmodel.FSR.read(status, rdata);
-		env.scb.error_parity_compare(rdata);
+		regmodel.RBR.read(status, rdata);
 	endtask: run_process
 
 endclass

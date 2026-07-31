@@ -96,8 +96,10 @@ class uart_monitor extends uvm_monitor;
 			act = uart_vif.tx;
 			if (act != exp) begin
 				tx.parity = 1'b1;
+				$display("======================================================= ERROR ===============================================================");
 			end else begin
 				tx.parity = 1'b0;
+				$display("======================================================= NORMAL ===============================================================");
 			end
 			baud_period(1);
 		end

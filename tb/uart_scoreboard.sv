@@ -15,12 +15,11 @@ class uart_scoreboard extends uvm_scoreboard;
 	uart_configuration cfg;
 	logic [7:0] mask, exp, act_data;
 	//logic parity_error_flag, rx_empty_flag, rx_full_flag, tx_empty_flag, tx_full_flag;
-	//logic exp_FSR, act_FSR;
+	logic exp_FSR, act_FSR;
 	logic [`AHB_DATA_WIDTH-1:0] exp_ahb, act_ahb;
 	//logic bge_status;
 	logic en_fc = 1'b1;
 
-	/*
 	// selection = 0 - default
 	//             1 - full_tx
 	//             2 - empty_tx
@@ -30,7 +29,7 @@ class uart_scoreboard extends uvm_scoreboard;
 	//             6 - normal_parity
 	//             7 - TX transfer
 	//             8 - RX transfer
-	int selection = 0;*/
+	int selection = 0;
 
 	function new(string name = "uart_scoreboard", uvm_component parent);
 		super.new(name, parent);
@@ -102,35 +101,30 @@ class uart_scoreboard extends uvm_scoreboard;
 					$display("============================================================================================================================");
 				//end
 			end
-		end /*else if (trans.addr == 10'h014) begin // FSR
-			if (trans.xact_type == ahb_transaction::WRITE) begin
-				parity_error_flag = 0;	
-			end else begin
+		end else if (trans.addr == 10'h014) begin // FSR
+			if (trans.xact_type == ahb_transaction::READ) begin
 				if (selection != 0 && selection != 7 && selection != 8) begin
 					case (selection)
 						5: begin
-							exp_FSR = parity_error_flag;
+							exp_FSR = 1'b1;
 							act_FSR = trans.data[4];
 						end
 						6: begin
-							exp_FSR = parity_error_flag;
+							exp_FSR = 1'b0;
 							act_FSR = trans.data[4];
-						end
-						4: begin
-							exp_FSR = rx_empty_flag;
-							act_FSR = trans.data[3];
-						end
-						3: begin
-							exp_FSR = rx_full_flag;
-							act_FSR = trans.data[2];
-						end
-						2: begin
-							exp_FSR = tx_empty_flag;
-							act_FSR = trans.data[1];
 						end
 					endcase
 					if (selection == 5) begin
-						`uvm_info("write_ahb", $sformatf("AHB DATA COMPARATIVE"), UVM_LOW)
+						`uvm_info("error_parity_compare", $sformatf("ERROR PARITY COMPARATIVE"), UVM_LOW)
+						$display("============================================================================================================================");
+						`uvm_info(get_type_name(), $sformatf("rdata = %5b", trans.data), UVM_LOW);
+						if (exp_FSR == act_FSR) begin
+							`uvm_info(get_type_name(), $sformatf("PASSED! Parity error status is correct. Exp: %0b, Act: %0b", exp_FSR, act_FSR), UVM_LOW);
+						end else begin
+							`uvm_error(get_type_name(), $sformatf("FAILED! Parity error status is not correct. Exp: %0b, Act: %0b", exp_FSR, act_FSR));
+						end
+						$display("============================================================================================================================");
+						/*`uvm_info("write_ahb", $sformatf("AHB DATA COMPARATIVE"), UVM_LOW)
 						$display("============================================================================================================================");
 						if (exp_FSR != act_FSR) begin
 							`uvm_info(get_type_name(), $sformatf("PASSED! Signal is not matching. Exp: %1b, Act: %1b", exp_FSR, act_FSR), UVM_LOW);
@@ -138,6 +132,7 @@ class uart_scoreboard extends uvm_scoreboard;
 							`uvm_error(get_type_name(), $sformatf("FAILED! Signal is matching. Exp: %1b, Act: %1b", exp_FSR, act_FSR));
 						end
 						$display("============================================================================================================================");
+						*/
 					end else begin
 						`uvm_info("write_ahb", $sformatf("AHB DATA COMPARATIVE"), UVM_LOW)
 						$display("============================================================================================================================");
@@ -152,10 +147,6 @@ class uart_scoreboard extends uvm_scoreboard;
 					end
 				end
 			end
-		end else if (trans.addr == 10'h00C && trans.xact_type == ahb_transaction::WRITE) begin // LCR
-			bge_status = trans.data[5];
-			$display("bge_status = %0b", bge_status);
-			update_fifo();
 		end /*else if (trans.addr >= 10'h020 && trans.addr <= 10'h3FF) begin
 			/*if (trans.xact_type == ahb_transaction::READ) begin
 				`uvm_info("write_ahb", $sformatf("AHB DATA COMPARATIVE"), UVM_LOW)
@@ -173,14 +164,6 @@ class uart_scoreboard extends uvm_scoreboard;
 	endfunction: write_ahb
 
 	virtual function void error_parity_compare(logic [`AHB_DATA_WIDTH - 1:0] rdata);
-		`uvm_info("error_parity_compare", $sformatf("ERROR PARITY COMPARATIVE"), UVM_LOW)
-		$display("============================================================================================================================");
-		if (rdata[4]) begin
-			`uvm_info(get_type_name(), $sformatf("PASSED! Parity error status is correct. Exp: %0b, Act: %0b", 1'b1, rdata[4]), UVM_LOW);
-		end else begin
-			`uvm_error(get_type_name(), $sformatf("FAILED! Parity error status is not correct. Exp: %0b, Act: %0b", 1'b1, rdata[4]));
-		end
-		$display("============================================================================================================================");
 	endfunction: error_parity_compare
 	
 	/*virtual function void update_fifo();

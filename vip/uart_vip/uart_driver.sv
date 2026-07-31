@@ -7,6 +7,7 @@ class uart_driver extends uvm_driver #(uart_transaction);
 	int cnt_HIGH, len;
 	uart_transaction trans;
 	int n;
+	logic current_parity;
 	uvm_analysis_port #(uart_transaction) item_observed_port;
 
 	function new(string name = "uart_driver", uvm_component parent);
@@ -72,27 +73,29 @@ class uart_driver extends uvm_driver #(uart_transaction);
 		case (cfg.parity_mode)
 			uart_configuration::ODD: begin
 				if (cnt_HIGH % 2 == 0) begin
-					uart_vif.tx = 1'b1;
+					current_parity = 1'b1;
 				end else begin
-					uart_vif.tx = 1'b0;
+					current_parity = 1'b0;
 				end
 			end
 			uart_configuration::EVEN: begin
 				if (cnt_HIGH % 2 == 0) begin
-					uart_vif.tx = 1'b0;
+					current_parity = 1'b0;
 				end else begin
-					uart_vif.tx = 1'b1;
+					current_parity = 1'b1;
 				end
 			end
 			default: begin
 			end
 		endcase	
 		if (cfg.parity_mode != uart_configuration::NONE) begin
+//			$display("------------------------> current_parity = %1b", current_parity);
 			if (cfg.parity_error == uart_configuration::ERROR) begin
-//				$display("------------------------> uart_vif.tx = %1b", uart_vif.tx);
-				uart_vif.tx = ~uart_vif.tx;
-//				$display("------------------------> uart_vif.tx = %1b", uart_vif.tx);
+				current_parity = ~current_parity;
+//				$display("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			end
+			uart_vif.tx = current_parity;
+//			$display("------------------------> current_parity = %1b", current_parity);
 			baud_period();
 		end
 		// STOP
