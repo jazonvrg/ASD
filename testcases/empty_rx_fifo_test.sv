@@ -23,7 +23,6 @@ class empty_rx_fifo_test extends uart_base_test;
 
 	virtual task run_phase(uvm_phase phase);
 		phase.raise_objection(this);
-		env.scb.selection = 4;	
 		reset();
 		seq = uart_sequence::type_id::create("seq");
 		$display("============================================================================================================================");
@@ -101,8 +100,10 @@ class empty_rx_fifo_test extends uart_base_test;
 			else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b1, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		end else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b0, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		// empty_status = 1
+		env.scb.selection = 4.1;	
 		regmodel.FSR.read(status, rdata);
 		// empty_status = 0
+		env.scb.selection = 4.2;	
 		n = $urandom_range(1, 10);
 		wait_time(cfg);
 		repeat (n) begin
@@ -111,10 +112,11 @@ class empty_rx_fifo_test extends uart_base_test;
 			regmodel.FSR.read(status, rdata);
 		end
 		// empty_status = 1
+		env.scb.selection = 4.1;	
 		repeat (n) begin
 			regmodel.RBR.read(status, rdata);
-			regmodel.FSR.read(status, rdata);
 		end
+		regmodel.FSR.read(status, rdata);
 	endtask: run_process
 
 endclass

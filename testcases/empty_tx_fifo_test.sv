@@ -10,7 +10,7 @@ class empty_tx_fifo_test extends uart_base_test;
 	int bd_rate[] = '{2400, 4800, 9600, 19200, 38400, 76800, 115200};
 	int ovs[] = '{1'b0, 1'b1};
 	int custom_baud_rate;
-	int n;
+	int n, threshold;
 	logic [`AHB_DATA_WIDTH-1:0] rdata;
 
 	function new(string name = "empty_tx_fifo_test", uvm_component parent);
@@ -23,7 +23,6 @@ class empty_tx_fifo_test extends uart_base_test;
 
 	virtual task run_phase(uvm_phase phase);
 		phase.raise_objection(this);
-		env.scb.selection = 2;	
 		reset();
 		seq = uart_sequence::type_id::create("seq");
 		$display("============================================================================================================================");
@@ -96,32 +95,34 @@ class empty_tx_fifo_test extends uart_base_test;
 		regmodel.LCR.write(status, 32'h0);
 		regmodel.DLL.write(status, {24'h0, cfg.divisor[7:0]});
 		regmodel.DLH.write(status, {24'h0, cfg.divisor[15:8]});
-		// empty_status = 1
-		regmodel.FSR.read(status,rdata);
 		if (cfg.parity_mode != uart_configuration::NONE) begin
 			if (cfg.parity_mode == uart_configuration::ODD) regmodel.LCR.write(status, {26'h0, 1'b0, 1'b0, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 			else regmodel.LCR.write(status, {26'h0, 1'b0, 1'b1, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		end else regmodel.LCR.write(status, {26'h0, 1'b0, 1'b0, 1'b0, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
-		// empty_status = 0
-		n = $urandom_range(2, 10);
-		repeat (n) begin
-			regmodel.TBR.write(status, $urandom_range(0, (1 << cfg.data_width) - 1));
-		end
-		repeat (3) @(posedge ahb_vif.HCLK);
-		regmodel.FSR.read(status,rdata);
 		// empty_status = 1
+		env.scb.selection = 2.1;
+		regmodel.FSR.read(status,rdata);
+		// empty_status = 0
+		n = $urandom_range(1, 10);
+		for(int i = 1; i <= n; i = i + 1) begin
+			if (i > 1) begin
+				env.scb.selection = 2.2;
+			end else begin
+				env.scb.selection = 2.1;
+			end
+			regmodel.TBR.write(status, $urandom_range(0, (1 << cfg.data_width) - 1));
+			regmodel.FSR.read(status,rdata);
+		end
+		// empty_status = 1
+		env.scb.selection = 2.1;
 		if (cfg.parity_mode != uart_configuration::NONE) begin
 			if (cfg.parity_mode == uart_configuration::ODD) regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 			else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b1, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		end else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b0, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
-		do begin
-			regmodel.FSR.read(status, rdata);
-			if (rdata[1] == 1'b0) begin
-				read_limit(cfg);
-			end
-		end while (rdata[1] == 1'b0);
-		wait_time(cfg);
-		$display(" n = %0d", n);
+		repeat (n) begin
+			wait_time(cfg);
+		end
+		regmodel.FSR.read(status,rdata);
 	endtask: run_process
 
 endclass

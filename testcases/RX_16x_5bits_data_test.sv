@@ -21,7 +21,7 @@ class RX_16x_5bits_data_test extends uart_base_test;
 
 	virtual task run_phase(uvm_phase phase);
 		phase.raise_objection(this);
-		//env.scb.selection = 8;	
+		env.scb.selection = 8;	
 		reset();
 		seq = uart_sequence::type_id::create("seq");
 		foreach(prt_mode[i_prt]) begin

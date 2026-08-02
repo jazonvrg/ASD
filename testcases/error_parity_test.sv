@@ -142,6 +142,7 @@ class error_parity_test extends uart_base_test;
 		end else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b0, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		wait_time(cfg);
 		seq.start(env.uart_agt.seq);
+		wait_monitor(cfg);
 		regmodel.FSR.read(status, rdata);
 		regmodel.RBR.read(status, rdata);
 	endtask: run_process

@@ -1,6 +1,6 @@
 # vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l empty_tx_fifo_test_1.log "+UVM_TESTNAME=empty_tx_fifo_test" "+UVM_VERBOSITY=UVM_HIGH" 
-# Start time: 22:02:06 on Jul 30,2026
-# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_78630/linux_x86_64_gcc-11/export_tramp.so
+# Start time: 10:52:45 on Aug 02,2026
+# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_83069/linux_x86_64_gcc-11/export_tramp.so
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim-64
 # //  Version 10.6d_1 linux_x86_64 Apr 11 2018
@@ -41,9 +41,9 @@
 # Loading work.uart_receiver(fast)
 # Loading work.uart_interrupt(fast)
 # Loading work.baud_generator(fast)
-# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_78630/linux_x86_64_gcc-5.3.0/exportwrapper.c
-# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_78630/linux_x86_64_gcc-11/exportwrapper.c
-# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_78630/linux_x86_64_gcc-11/vsim_auto_compile.so
+# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_83069/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_83069/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_83069/linux_x86_64_gcc-11/vsim_auto_compile.so
 #  log -r /*
 # run -all
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
@@ -86,8 +86,8 @@
 # UVM_INFO ./../vip/uart_vip/uart_agent.sv(17) @ 0: uvm_test_top.env.uart_agt [build_phase] Entered...
 # UVM_INFO ./../vip/uart_vip/uart_agent.sv(28) @ 0: uvm_test_top.env.uart_agt [uart_agent] Active agent is configured
 # UVM_INFO ./../vip/uart_vip/uart_agent.sv(43) @ 0: uvm_test_top.env.uart_agt [build_phase] Exiting...
-# UVM_INFO ./../vip/uart_vip/uart_driver.sv(18) @ 0: uvm_test_top.env.uart_agt.drv [build_phase] Entered...
-# UVM_INFO ./../vip/uart_vip/uart_driver.sv(29) @ 0: uvm_test_top.env.uart_agt.drv [build_phase] Exiting...
+# UVM_INFO ./../vip/uart_vip/uart_driver.sv(19) @ 0: uvm_test_top.env.uart_agt.drv [build_phase] Entered...
+# UVM_INFO ./../vip/uart_vip/uart_driver.sv(30) @ 0: uvm_test_top.env.uart_agt.drv [build_phase] Exiting...
 # UVM_INFO ./../vip/uart_vip/uart_monitor.sv(20) @ 0: uvm_test_top.env.uart_agt.mnt [build_phase] Entered...
 # UVM_INFO ./../vip/uart_vip/uart_monitor.sv(31) @ 0: uvm_test_top.env.uart_agt.mnt [build_phase] Exiting...
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(579) @ 0: reporter [UVMTOP] UVM testbench topology:
@@ -135,13 +135,13 @@
 # 
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
 # UVM_INFO ./../vip/uart_vip/uart_monitor.sv(35) @ 0: uvm_test_top.env.uart_agt.mnt [run_phase] Entered...
-# UVM_INFO ./../vip/uart_vip/uart_driver.sv(33) @ 0: uvm_test_top.env.uart_agt.drv [run_phase] Entered...
+# UVM_INFO ./../vip/uart_vip/uart_driver.sv(34) @ 0: uvm_test_top.env.uart_agt.drv [run_phase] Entered...
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(25) @ 0: uvm_test_top.env.ahb_agt.mnt [run_phase] Entered...
 # UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(22) @ 0: uvm_test_top.env.ahb_agt.drv [run_phase] Entered...
 # ============================================================================================================================
 # =================================================  ### EMPTY TX FIFO  ###  =================================================
 # ============================================================================================================================
-# UVM_INFO ./../testcases/empty_tx_fifo_test.sv(33) @ 10000: uvm_test_top [run_phase] Configuration randomize is: 
+# UVM_INFO ./../testcases/empty_tx_fifo_test.sv(32) @ 10000: uvm_test_top [run_phase] Configuration randomize is: 
 # -------------------------------------------------------
 # Name               Type                 Size  Value    
 # -------------------------------------------------------
@@ -193,7 +193,6 @@
 # 
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0xc, data = 0x0, kind = UVM_WRITE, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h0 : updated value = 'h0
-# bge_status = 0
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0xc, data = 0x0, kind = UVM_WRITE, status = UVM_IS_OK
 # UVM_INFO @ 10000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.LCR=0x0
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 10000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x4, data = 0x1, kind = WRITE
@@ -236,37 +235,13 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='h0 : updated value = 'h0
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x8, data = 0x0, kind = UVM_WRITE, status = UVM_IS_OK
 # UVM_INFO @ 10000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.DLH=0x0
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 10000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
-# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
-# ----------------------------------------------
-# Name          Type             Size  Value    
-# ----------------------------------------------
-# trans         ahb_transaction  -     @1233    
-#   xact_type   xact_type_enum   1     READ     
-#   xfer_size   xfer_size_enum   3     SIZE_8BIT
-#   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'h14     
-#   data        integral         32    'ha      
-#   prot        integral         4     'h0      
-#   lock        integral         1     'h0      
-# ----------------------------------------------
-# 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='ha
-# UVM_INFO ./../tb/uart_scoreboard.sv(141) @ 10000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
-# ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(145) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 1, Act: 1	size = 0
-# ============================================================================================================================
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO @ 10000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=a
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 10000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0xc, data = 0x5, kind = WRITE
 # UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = c, data = 5
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
 # ----------------------------------------------
 # Name          Type             Size  Value    
 # ----------------------------------------------
-# trans         ahb_transaction  -     @1277    
+# trans         ahb_transaction  -     @1233    
 #   xact_type   xact_type_enum   1     WRITE    
 #   xfer_size   xfer_size_enum   3     SIZE_8BIT
 #   burst_type  burst_type_enum  3     SINGLE   
@@ -278,9 +253,32 @@
 # 
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0xc, data = 0x5, kind = UVM_WRITE, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h5 : updated value = 'h5
-# bge_status = 0
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0xc, data = 0x5, kind = UVM_WRITE, status = UVM_IS_OK
 # UVM_INFO @ 10000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.LCR=0x5
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 10000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @1273    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'ha      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='ha
+# UVM_INFO ./../tb/uart_scoreboard.sv(138) @ 10000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 10000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=a
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 10000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x28, kind = WRITE
 # UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 28
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
@@ -299,142 +297,61 @@
 # 
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x28, kind = UVM_WRITE, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h28 : updated value = 'h28
-# UVM_INFO ./../tb/uart_scoreboard.sv(84) @ 10000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 10000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x28, kind = UVM_WRITE, status = UVM_IS_OK
 # UVM_INFO @ 10000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x28
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 10000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x1d, kind = WRITE
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 1d
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 10000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
 # ----------------------------------------------
 # Name          Type             Size  Value    
 # ----------------------------------------------
 # trans         ahb_transaction  -     @1359    
-#   xact_type   xact_type_enum   1     WRITE    
+#   xact_type   xact_type_enum   1     READ     
 #   xfer_size   xfer_size_enum   3     SIZE_8BIT
 #   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'h18     
-#   data        integral         32    'h1d     
+#   addr        integral         10    'h14     
+#   data        integral         32    'ha      
 #   prot        integral         4     'h0      
 #   lock        integral         1     'h0      
 # ----------------------------------------------
 # 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1d, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h1d : updated value = 'h1d
-# UVM_INFO ./../tb/uart_scoreboard.sv(84) @ 10000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1d, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO @ 10000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x1d
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 10000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x1c, kind = WRITE
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 1c
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='ha
+# UVM_INFO ./../tb/uart_scoreboard.sv(138) @ 10000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 10000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=a
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 10000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x10, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 10
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
 # ----------------------------------------------
 # Name          Type             Size  Value    
 # ----------------------------------------------
-# trans         ahb_transaction  -     @1401    
+# trans         ahb_transaction  -     @1403    
 #   xact_type   xact_type_enum   1     WRITE    
 #   xfer_size   xfer_size_enum   3     SIZE_8BIT
 #   burst_type  burst_type_enum  3     SINGLE   
 #   addr        integral         10    'h18     
-#   data        integral         32    'h1c     
+#   data        integral         32    'h10     
 #   prot        integral         4     'h0      
 #   lock        integral         1     'h0      
 # ----------------------------------------------
 # 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1c, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h1c : updated value = 'h1c
-# UVM_INFO ./../tb/uart_scoreboard.sv(84) @ 10000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1c, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO @ 10000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x1c
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 10000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x39, kind = WRITE
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 39
-# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
-# ----------------------------------------------
-# Name          Type             Size  Value    
-# ----------------------------------------------
-# trans         ahb_transaction  -     @1443    
-#   xact_type   xact_type_enum   1     WRITE    
-#   xfer_size   xfer_size_enum   3     SIZE_8BIT
-#   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'h18     
-#   data        integral         32    'h39     
-#   prot        integral         4     'h0      
-#   lock        integral         1     'h0      
-# ----------------------------------------------
-# 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x39, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h39 : updated value = 'h39
-# UVM_INFO ./../tb/uart_scoreboard.sv(84) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x39, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x39
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x11, kind = WRITE
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 11
-# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
-# ----------------------------------------------
-# Name          Type             Size  Value    
-# ----------------------------------------------
-# trans         ahb_transaction  -     @1485    
-#   xact_type   xact_type_enum   1     WRITE    
-#   xfer_size   xfer_size_enum   3     SIZE_8BIT
-#   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'h18     
-#   data        integral         32    'h11     
-#   prot        integral         4     'h0      
-#   lock        integral         1     'h0      
-# ----------------------------------------------
-# 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x11, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h11 : updated value = 'h11
-# UVM_INFO ./../tb/uart_scoreboard.sv(84) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x11, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x11
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x28, kind = WRITE
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 28
-# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
-# ----------------------------------------------
-# Name          Type             Size  Value    
-# ----------------------------------------------
-# trans         ahb_transaction  -     @1527    
-#   xact_type   xact_type_enum   1     WRITE    
-#   xfer_size   xfer_size_enum   3     SIZE_8BIT
-#   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'h18     
-#   data        integral         32    'h28     
-#   prot        integral         4     'h0      
-#   lock        integral         1     'h0      
-# ----------------------------------------------
-# 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x28, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h28 : updated value = 'h28
-# UVM_INFO ./../tb/uart_scoreboard.sv(84) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x28, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x28
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x11, kind = WRITE
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 11
-# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
-# ----------------------------------------------
-# Name          Type             Size  Value    
-# ----------------------------------------------
-# trans         ahb_transaction  -     @1569    
-#   xact_type   xact_type_enum   1     WRITE    
-#   xfer_size   xfer_size_enum   3     SIZE_8BIT
-#   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'h18     
-#   data        integral         32    'h11     
-#   prot        integral         4     'h0      
-#   lock        integral         1     'h0      
-# ----------------------------------------------
-# 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x11, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h11 : updated value = 'h11
-# UVM_INFO ./../tb/uart_scoreboard.sv(84) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x11, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x11
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x10, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h10 : updated value = 'h10
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 10000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x10, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 10000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x10
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 10000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
 # UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
 # ----------------------------------------------
 # Name          Type             Size  Value    
 # ----------------------------------------------
-# trans         ahb_transaction  -     @1611    
+# trans         ahb_transaction  -     @1445    
 #   xact_type   xact_type_enum   1     READ     
 #   xfer_size   xfer_size_enum   3     SIZE_8BIT
 #   burst_type  burst_type_enum  3     SINGLE   
@@ -446,40 +363,40 @@
 # 
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
-# UVM_INFO ./../tb/uart_scoreboard.sv(141) @ 11000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
 # ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(145) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0	size = 7
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
 # ============================================================================================================================
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0xc, data = 0x25, kind = WRITE
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = c, data = 25
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x20, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 20
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
 # ----------------------------------------------
 # Name          Type             Size  Value    
 # ----------------------------------------------
-# trans         ahb_transaction  -     @1655    
+# trans         ahb_transaction  -     @1489    
 #   xact_type   xact_type_enum   1     WRITE    
 #   xfer_size   xfer_size_enum   3     SIZE_8BIT
 #   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'hc      
-#   data        integral         32    'h25     
+#   addr        integral         10    'h18     
+#   data        integral         32    'h20     
 #   prot        integral         4     'h0      
 #   lock        integral         1     'h0      
 # ----------------------------------------------
 # 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0xc, data = 0x25, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h25 : updated value = 'h25
-# bge_status = 1
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0xc, data = 0x25, kind = UVM_WRITE, status = UVM_IS_OK
-# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.LCR=0x25
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x20, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h20 : updated value = 'h20
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x20, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x20
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
 # UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
 # ----------------------------------------------
 # Name          Type             Size  Value    
 # ----------------------------------------------
-# trans         ahb_transaction  -     @1695    
+# trans         ahb_transaction  -     @1531    
 #   xact_type   xact_type_enum   1     READ     
 #   xfer_size   xfer_size_enum   3     SIZE_8BIT
 #   burst_type  burst_type_enum  3     SINGLE   
@@ -491,19 +408,400 @@
 # 
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
-# UVM_INFO ./../tb/uart_scoreboard.sv(141) @ 11000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
 # ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(145) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0	size = 7
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
 # ============================================================================================================================
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x17, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 17
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @1575    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h17     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x17, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h17 : updated value = 'h17
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x17, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x17
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @1617    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x1b, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 1b
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @1661    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h1b     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1b, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h1b : updated value = 'h1b
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1b, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x1b
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @1703    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x2a, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 2a
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @1747    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h2a     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2a, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h2a : updated value = 'h2a
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2a, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x2a
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @1789    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x4, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 4
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @1833    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h4      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x4, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h4 : updated value = 'h4
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x4, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x4
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @1875    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x4, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 4
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @1919    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h4      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x4, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h4 : updated value = 'h4
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x4, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x4
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @1961    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x3d, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 3d
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2005    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h3d     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x3d, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h3d : updated value = 'h3d
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x3d, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x3d
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2047    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0xf, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = f
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2091    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'hf      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0xf, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hf : updated value = 'hf
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0xf, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0xf
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2133    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x2c, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 2c
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2177    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h2c     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2c, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h2c : updated value = 'h2c
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2c, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x2c
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2219    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x15, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 15
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2263    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h15     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x15, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h15 : updated value = 'h15
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 11000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x15, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 11000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x15
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 11000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
 # UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
 # ----------------------------------------------
 # Name          Type             Size  Value    
 # ----------------------------------------------
-# trans         ahb_transaction  -     @1739    
+# trans         ahb_transaction  -     @2305    
 #   xact_type   xact_type_enum   1     READ     
 #   xfer_size   xfer_size_enum   3     SIZE_8BIT
 #   burst_type  burst_type_enum  3     SINGLE   
@@ -515,19 +813,805 @@
 # 
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
-# UVM_INFO ./../tb/uart_scoreboard.sv(141) @ 12000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 12000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
 # ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(145) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0	size = 7
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
 # ============================================================================================================================
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO @ 12000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x2, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 2
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2349    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h2      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h2 : updated value = 'h2
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 12000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x2
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2391    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 12000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x1e, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 1e
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2435    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h1e     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1e, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h1e : updated value = 'h1e
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 12000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1e, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x1e
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2477    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 12000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x1d, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 1d
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2521    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h1d     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1d, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h1d : updated value = 'h1d
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 12000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1d, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x1d
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2563    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 12000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x37, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 37
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2607    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h37     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x37, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h37 : updated value = 'h37
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 12000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x37, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x37
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2649    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 12000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0xc, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = c
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2693    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'hc      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0xc, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hc : updated value = 'hc
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 12000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0xc, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0xc
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2739    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h8      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 12000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x20, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 20
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2783    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h20     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x20, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h20 : updated value = 'h20
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 12000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x20, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x20
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2825    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 12000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x3a, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 3a
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2869    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h3a     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x3a, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h3a : updated value = 'h3a
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 12000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x3a, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x3a
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2911    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 12000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x29, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 29
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2955    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h29     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x29, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h29 : updated value = 'h29
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 12000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x29, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x29
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @2997    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 12000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x2e, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 2e
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3041    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h2e     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2e, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h2e : updated value = 'h2e
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 12000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2e, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x2e
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3083    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 12000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x22, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 22
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3127    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h22     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x22, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h22 : updated value = 'h22
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 12000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x22, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 12000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x22
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 12000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3169    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 13000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 13000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x1d, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 1d
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3213    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h1d     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1d, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h1d : updated value = 'h1d
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 13000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x1d, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x1d
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
 # UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
 # ----------------------------------------------
 # Name          Type             Size  Value    
 # ----------------------------------------------
-# trans         ahb_transaction  -     @1783    
+# trans         ahb_transaction  -     @3255    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 13000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 13000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x2f, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 2f
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3299    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h2f     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2f, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h2f : updated value = 'h2f
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 13000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2f, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x2f
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3341    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 13000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 13000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0xe, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = e
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3385    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'he      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0xe, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='he : updated value = 'he
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 13000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0xe, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0xe
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3427    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 13000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 13000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x20, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 20
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3471    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h20     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x20, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h20 : updated value = 'h20
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 13000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x20, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x20
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3513    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 13000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 13000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x21, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 21
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3557    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h21     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x21, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h21 : updated value = 'h21
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 13000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x21, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x21
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3599    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 13000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 13000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x36, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 36
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3643    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h36     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x36, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h36 : updated value = 'h36
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 13000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x36, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x36
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3685    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 13000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 13000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0x2c, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 2c
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3729    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'h2c     
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2c, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h2c : updated value = 'h2c
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 13000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x2c, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0x2c
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3771    
+#   xact_type   xact_type_enum   1     READ     
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h14     
+#   data        integral         32    'h9      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h9
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 13000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 13000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x9, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=9
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x18, data = 0xd, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = d
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3815    
+#   xact_type   xact_type_enum   1     WRITE    
+#   xfer_size   xfer_size_enum   3     SIZE_8BIT
+#   burst_type  burst_type_enum  3     SINGLE   
+#   addr        integral         10    'h18     
+#   data        integral         32    'hd      
+#   prot        integral         4     'h0      
+#   lock        integral         1     'h0      
+# ----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0xd, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hd : updated value = 'hd
+# UVM_INFO ./../tb/uart_scoreboard.sv(80) @ 13000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0xd, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.TBR=0xd
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# ----------------------------------------------
+# Name          Type             Size  Value    
+# ----------------------------------------------
+# trans         ahb_transaction  -     @3857    
 #   xact_type   xact_type_enum   1     READ     
 #   xfer_size   xfer_size_enum   3     SIZE_8BIT
 #   burst_type  burst_type_enum  3     SINGLE   
@@ -539,139 +1623,39 @@
 # 
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
-# UVM_INFO ./../tb/uart_scoreboard.sv(141) @ 13000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
+# UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 13000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
 # ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(145) @ 13000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0	size = 6
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 13000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
 # ============================================================================================================================
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO @ 13000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 14000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 14000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
-# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 14000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 13000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0xc, data = 0x25, kind = WRITE
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 13000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = c, data = 25
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 13000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
 # ----------------------------------------------
 # Name          Type             Size  Value    
 # ----------------------------------------------
-# trans         ahb_transaction  -     @1831    
-#   xact_type   xact_type_enum   1     READ     
+# trans         ahb_transaction  -     @3901    
+#   xact_type   xact_type_enum   1     WRITE    
 #   xfer_size   xfer_size_enum   3     SIZE_8BIT
 #   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'h14     
-#   data        integral         32    'h8      
+#   addr        integral         10    'hc      
+#   data        integral         32    'h25     
 #   prot        integral         4     'h0      
 #   lock        integral         1     'h0      
 # ----------------------------------------------
 # 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 14000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 14000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
-# UVM_INFO ./../tb/uart_scoreboard.sv(141) @ 14000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
-# ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(145) @ 14000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0	size = 5
-# ============================================================================================================================
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 14000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO @ 14000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 15000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 15000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
-# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 15000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0xc, data = 0x25, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 13000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h25 : updated value = 'h25
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 13000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0xc, data = 0x25, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO @ 13000: reporter [RegModel] Wrote register via map regmodel.ahb_map: regmodel.LCR=0x25
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 30013000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 30013000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 30013000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
 # ----------------------------------------------
 # Name          Type             Size  Value    
 # ----------------------------------------------
-# trans         ahb_transaction  -     @1879    
-#   xact_type   xact_type_enum   1     READ     
-#   xfer_size   xfer_size_enum   3     SIZE_8BIT
-#   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'h14     
-#   data        integral         32    'h8      
-#   prot        integral         4     'h0      
-#   lock        integral         1     'h0      
-# ----------------------------------------------
-# 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 15000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 15000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
-# UVM_INFO ./../tb/uart_scoreboard.sv(141) @ 15000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
-# ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(145) @ 15000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0	size = 5
-# ============================================================================================================================
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 15000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO @ 15000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 16000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 16000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
-# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 16000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
-# ----------------------------------------------
-# Name          Type             Size  Value    
-# ----------------------------------------------
-# trans         ahb_transaction  -     @1923    
-#   xact_type   xact_type_enum   1     READ     
-#   xfer_size   xfer_size_enum   3     SIZE_8BIT
-#   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'h14     
-#   data        integral         32    'h8      
-#   prot        integral         4     'h0      
-#   lock        integral         1     'h0      
-# ----------------------------------------------
-# 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 16000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 16000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
-# UVM_INFO ./../tb/uart_scoreboard.sv(141) @ 16000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
-# ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(145) @ 16000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0	size = 4
-# ============================================================================================================================
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 16000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO @ 16000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 17000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 17000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
-# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 17000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
-# ----------------------------------------------
-# Name          Type             Size  Value    
-# ----------------------------------------------
-# trans         ahb_transaction  -     @1971    
-#   xact_type   xact_type_enum   1     READ     
-#   xfer_size   xfer_size_enum   3     SIZE_8BIT
-#   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'h14     
-#   data        integral         32    'h8      
-#   prot        integral         4     'h0      
-#   lock        integral         1     'h0      
-# ----------------------------------------------
-# 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 17000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 17000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
-# UVM_INFO ./../tb/uart_scoreboard.sv(141) @ 17000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
-# ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(145) @ 17000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0	size = 4
-# ============================================================================================================================
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 17000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO @ 17000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 18000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 18000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
-# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 18000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
-# ----------------------------------------------
-# Name          Type             Size  Value    
-# ----------------------------------------------
-# trans         ahb_transaction  -     @2015    
-#   xact_type   xact_type_enum   1     READ     
-#   xfer_size   xfer_size_enum   3     SIZE_8BIT
-#   burst_type  burst_type_enum  3     SINGLE   
-#   addr        integral         10    'h14     
-#   data        integral         32    'h8      
-#   prot        integral         4     'h0      
-#   lock        integral         1     'h0      
-# ----------------------------------------------
-# 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 18000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 18000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
-# UVM_INFO ./../tb/uart_scoreboard.sv(141) @ 18000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
-# ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(145) @ 18000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0	size = 3
-# ============================================================================================================================
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 18000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO @ 18000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(27) @ 19000: reporter [uart_reg2ahb_adapter] reg2bus: addr = 0x14, data = 0x0, kind = READ
-# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 19000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 14, data = 0
-# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(45) @ 19000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
-# ----------------------------------------------
-# Name          Type             Size  Value    
-# ----------------------------------------------
-# trans         ahb_transaction  -     @2063    
+# trans         ahb_transaction  -     @3941    
 #   xact_type   xact_type_enum   1     READ     
 #   xfer_size   xfer_size_enum   3     SIZE_8BIT
 #   burst_type  burst_type_enum  3     SINGLE   
@@ -681,24 +1665,23 @@
 #   lock        integral         1     'h0      
 # ----------------------------------------------
 # 
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 19000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 19000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='ha
-# UVM_INFO ./../tb/uart_scoreboard.sv(141) @ 19000: uvm_test_top.env.scb [write_ahb] AHB DATA COMPARATIVE
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 30013000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 30013000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='ha
+# UVM_INFO ./../tb/uart_scoreboard.sv(138) @ 30013000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
 # ============================================================================================================================
-# UVM_ERROR ./../tb/uart_scoreboard.sv(148) @ 19000: uvm_test_top.env.scb [uart_scoreboard] FAILED! Signal is not matching. Exp: 0, Act: 1	size = 3
+# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 30013000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 1, Act: 1
 # ============================================================================================================================
-# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 19000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
-# UVM_INFO @ 19000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=a
-#  n = 7
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 1019000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ./../testcases/uart_base_test.sv(59) @ 1019000: uvm_test_top [final_phase] Entered...
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 30013000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO @ 30013000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=a
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 30013000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ./../testcases/uart_base_test.sv(59) @ 30013000: uvm_test_top [final_phase] Entered...
 # 
 # =====================================================
-#             #### Status: TEST FAILED ####              
+#             #### Status: TEST PASSED ####              
 # 
 # =====================================================
-# UVM_INFO ./../testcases/uart_base_test.sv(70) @ 1019000: uvm_test_top [final_phase] Exiting...
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_catcher.svh(705) @ 1019000: reporter [UVM/REPORT/CATCHER] 
+# UVM_INFO ./../testcases/uart_base_test.sv(70) @ 30013000: uvm_test_top [final_phase] Exiting...
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_catcher.svh(705) @ 30013000: reporter [UVM/REPORT/CATCHER] 
 # --- UVM Report catcher Summary ---
 # 
 # 
@@ -709,38 +1692,38 @@
 # Number of caught UVM_ERROR reports   :    0
 # Number of caught UVM_WARNING reports :    0
 # 
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 1019000: reporter [UVM/REPORT/SERVER] 
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 30013000: reporter [UVM/REPORT/SERVER] 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :  230
+# UVM_INFO :  604
 # UVM_WARNING :    0
-# UVM_ERROR :    1
+# UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [NO_DPI_TSTNAME]     1
-# [REG_PREDICT]    24
+# [REG_PREDICT]    68
 # [RNTST]     1
-# [RegModel]    24
+# [RegModel]    68
 # [TEST_DONE]     1
 # [UVM/COMP/NAMECHECK]     1
 # [UVM/RELNOTES]     1
 # [UVM/REPORT/CATCHER]     1
 # [UVMTOP]     1
 # [ahb_agent]     1
-# [ahb_driver]    24
-# [ahb_monitor]    24
+# [ahb_driver]    68
+# [ahb_monitor]    68
 # [build phase]     1
 # [build_phase]    17
+# [empty_tx_fifo_compare]    32
 # [final_phase]     2
 # [run_phase]     5
 # [uart_agent]     1
-# [uart_reg2ahb_adapter]    72
-# [uart_scoreboard]    11
-# [write_ahb]    11
-# [write_rx]     7
+# [uart_reg2ahb_adapter]   204
+# [uart_scoreboard]    32
+# [write_rx]    30
 # 
 # ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
-#    Time: 1019235 ns  Iteration: 68  Instance: /testbench
-# End time: 22:02:09 on Jul 30,2026, Elapsed time: 0:00:03
+#    Time: 30013405 ns  Iteration: 70  Instance: /testbench
+# End time: 10:52:50 on Aug 02,2026, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 0
