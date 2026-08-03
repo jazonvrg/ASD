@@ -10,7 +10,7 @@ class empty_tx_fifo_test extends uart_base_test;
 	int bd_rate[] = '{2400, 4800, 9600, 19200, 38400, 76800, 115200};
 	int ovs[] = '{1'b0, 1'b1};
 	int custom_baud_rate;
-	int n, threshold;
+	int n;
 	logic [`AHB_DATA_WIDTH-1:0] rdata;
 
 	function new(string name = "empty_tx_fifo_test", uvm_component parent);
@@ -103,13 +103,9 @@ class empty_tx_fifo_test extends uart_base_test;
 		env.scb.selection = 2.1;
 		regmodel.FSR.read(status,rdata);
 		// empty_status = 0
-		n = $urandom_range(1, 10);
+		n = $urandom_range(1, 16);
 		for(int i = 1; i <= n; i = i + 1) begin
-			if (i > 1) begin
-				env.scb.selection = 2.2;
-			end else begin
-				env.scb.selection = 2.1;
-			end
+			env.scb.selection = (i > 1) ? 2.2 : 2.1;
 			regmodel.TBR.write(status, $urandom_range(0, (1 << cfg.data_width) - 1));
 			regmodel.FSR.read(status,rdata);
 		end

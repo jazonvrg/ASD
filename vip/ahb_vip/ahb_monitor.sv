@@ -42,6 +42,7 @@ class ahb_monitor extends uvm_monitor;
 			end else begin
 				trans.data = ahb_vif.HRDATA;
 			end
+			trans.resp = ahb_vif.HRESP;
 			`uvm_info(get_type_name(), $sformatf("Observed transaction: \n%s", trans.sprint()), UVM_LOW)
 			ahb_observed_port.write(trans);
 		end

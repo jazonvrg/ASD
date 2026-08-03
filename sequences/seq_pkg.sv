@@ -21,7 +21,10 @@ package seq_pkg;
 
   	// Include your file
 	`include "uart_sequence.sv"
-	`include "ahb_sequence.sv"
+	`include "write_register_reserved_sequence.sv"
+	`include "read_register_reserved_sequence.sv"
+	`include "write_register_sequence.sv"
+	`include "read_register_sequence.sv"
 
 endpackage: seq_pkg
 

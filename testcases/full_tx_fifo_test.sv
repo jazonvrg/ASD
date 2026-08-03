@@ -10,7 +10,7 @@ class full_tx_fifo_test extends uart_base_test;
 	int bd_rate[] = '{2400, 4800, 9600, 19200, 38400, 76800, 115200};
 	int ovs[] = '{1'b0, 1'b1};
 	int custom_baud_rate;
-	int n, threshold;
+	int n;
 	logic [`AHB_DATA_WIDTH-1:0] rdata;
 
 	function new(string name = "full_tx_fifo_test", uvm_component parent);
@@ -85,24 +85,6 @@ class full_tx_fifo_test extends uart_base_test;
 		#(calc_time * 1us);
 	endtask: read_limit
 
-	virtual task loss(uart_configuration cfg);
-		int calc_time, num_of_bit, num_of_start, num_of_width, num_of_parity, num_of_stop;
-		real time_16ff_ahb, time_1frame_uart;
-		calc_time = (1 / cfg.baud_rate) + 1;
-		num_of_start = 1;
-		num_of_width = cfg.data_width;
-		num_of_parity = (cfg.parity_mode == uart_configuration::NONE) ? 0 : 1;
-		num_of_stop = cfg.num_of_stop_bit;
-		num_of_bit = num_of_start + num_of_width + num_of_parity + num_of_stop;
-		time_16ff_ahb = 16.0 * 80.0 / 1000000000.0;
-		time_1frame_uart = real'(num_of_bit) / real'(cfg.baud_rate);
-		threshold = 16;
-		if (time_1frame_uart < time_16ff_ahb) begin
-			threshold = threshold + $floor(time_16ff_ahb / time_1frame_uart);
-		end
-		`uvm_info(get_type_name(), $sformatf("NUM_OF_BIT = %0d", num_of_bit), UVM_LOW)
-	endtask: loss
-
 	virtual task run_process();
 		calc_divisor(cfg);
 		if (cfg.ovsmpl == uart_configuration::X16) begin
@@ -121,18 +103,12 @@ class full_tx_fifo_test extends uart_base_test;
 		env.scb.selection = 1.1;
 		regmodel.FSR.read(status, rdata);
 		// full_status = 1
-		n = $urandom_range(16, 20);
-		wait_time(cfg);
-		for(int i = 1; i <= n; i = i + 1) begin
-			`uvm_info(get_type_name(), $sformatf("i = %0d", i), UVM_LOW)
-			if (i < 16) begin
-				env.scb.selection = 1.1;
-			end else begin
-				env.scb.selection = 1.2;
-			end
+		env.scb.selection = 1.2;
+		n = $urandom_range(17, 27);
+		repeat (n) begin
 			regmodel.TBR.write(status, $urandom_range(0, (1 << cfg.data_width) - 1));
-			regmodel.FSR.read(status, rdata);
 		end
+		regmodel.FSR.read(status, rdata);
 		// full_status = 0
 		env.scb.selection = 1.1;
 		if (cfg.parity_mode != uart_configuration::NONE) begin
@@ -141,11 +117,8 @@ class full_tx_fifo_test extends uart_base_test;
 		end else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b0, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		repeat (n) begin
 			wait_time(cfg);
+			regmodel.FSR.read(status, rdata);
 		end
-		regmodel.FSR.read(status, rdata);
-		`uvm_info(get_type_name(), $sformatf("BAUD RATE = %0d", cfg.baud_rate), UVM_LOW)
-		`uvm_info(get_type_name(), $sformatf("THRESHOLD = %0d", threshold), UVM_LOW)
-		loss(cfg);
 	endtask: run_process
 
 endclass

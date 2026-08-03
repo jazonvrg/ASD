@@ -103,24 +103,20 @@ class full_rx_fifo_test extends uart_base_test;
 		env.scb.selection = 3.1;
 		regmodel.FSR.read(status, rdata);
 		// full_status = 1
-		n = $urandom_range(16, 20);
+		env.scb.selection = 3.2;
+		n = $urandom_range(16, 26);
 		wait_time(cfg);
-		for(int i = 1; i <= n; i = i + 1) begin
-			if (i < 16) begin
-				env.scb.selection = 3.1;
-			end else begin
-				env.scb.selection = 3.2;
-			end
+		repeat (n) begin
 			seq.start(env.uart_agt.seq);
-			wait_monitor(cfg);
-			regmodel.FSR.read(status, rdata);
 		end
+		wait_monitor(cfg);
+		regmodel.FSR.read(status, rdata);
 		// full_status = 0
 		env.scb.selection = 3.1;
 		repeat (n) begin
 			regmodel.RBR.read(status, rdata);
+			regmodel.FSR.read(status, rdata);
 		end
-		regmodel.FSR.read(status, rdata);
 	endtask: run_process
 
 endclass

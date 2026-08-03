@@ -1,0 +1,1915 @@
+# vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l error_reserved_test_1.log "+UVM_TESTNAME=error_reserved_test" "+UVM_VERBOSITY=UVM_HIGH" 
+# Start time: 11:55:32 on Aug 03,2026
+# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_121489/linux_x86_64_gcc-11/export_tramp.so
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 10.6d_1 linux_x86_64 Apr 11 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.uart_if(fast)
+# Loading work.ahb_if(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.ahb_pkg(fast)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.uart_pkg(fast)
+# Loading work.seq_pkg(fast)
+# Loading work.uart_register_pkg(fast)
+# Loading work.uart_regmodel_pkg(fast)
+# Loading work.env_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.ahb_if(fast)
+# Loading work.uart_if(fast)
+# Loading work.uart_top(fast)
+# Loading work.cmsdk_ahb_to_apb(fast)
+# Loading work.apb_decoder(fast)
+# Loading work.uart_fifo(fast)
+# Loading work.uart_transmitter(fast)
+# Loading work.uart_receiver(fast)
+# Loading work.uart_interrupt(fast)
+# Loading work.baud_generator(fast)
+# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_121489/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_121489/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_121489/linux_x86_64_gcc-11/vsim_auto_compile.so
+#  log -r /*
+# run -all
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(453) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+# UVM_INFO @ 0: reporter [RNTST] Running test error_reserved_test...
+# UVM_INFO ./../testcases/uart_base_test.sv(19) @ 0: uvm_test_top [build_phase] Entered...
+# UVM_INFO ./../testcases/uart_base_test.sv(34) @ 0: uvm_test_top [build_phase] Exiting...
+# UVM_INFO ./../tb/uart_environment.sv(21) @ 0: uvm_test_top.env [build phase] Entered...
+# UVM_INFO ./../tb/uart_environment.sv(45) @ 0: uvm_test_top.env [build_phase] Exiting...
+# UVM_INFO ./../vip/ahb_vip/ahb_agent.sv(16) @ 0: uvm_test_top.env.ahb_agt [build_phase] Entered...
+# UVM_INFO ./../vip/ahb_vip/ahb_agent.sv(21) @ 0: uvm_test_top.env.ahb_agt [ahb_agent] Active agent is configued
+# UVM_INFO ./../vip/ahb_vip/ahb_agent.sv(31) @ 0: uvm_test_top.env.ahb_agt [build_phase] Exiting...
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(12) @ 0: uvm_test_top.env.ahb_agt.drv [build_phase] Entered...
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(17) @ 0: uvm_test_top.env.ahb_agt.drv [build_phase] Exiting...
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(16) @ 0: uvm_test_top.env.ahb_agt.mnt [build_phase] Entered...
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(21) @ 0: uvm_test_top.env.ahb_agt.mnt [build_phase] Exiting...
+# UVM_INFO ./../tb/uart_scoreboard.sv(48) @ 0: uvm_test_top.env.scb [build_phase] Entered...
+# UVM_INFO ./../tb/uart_scoreboard.sv(55) @ 0: uvm_test_top.env.scb [build_phase] Exiting...
+# UVM_INFO ./../vip/uart_vip/uart_agent.sv(17) @ 0: uvm_test_top.env.uart_agt [build_phase] Entered...
+# UVM_INFO ./../vip/uart_vip/uart_agent.sv(28) @ 0: uvm_test_top.env.uart_agt [uart_agent] Active agent is configured
+# UVM_INFO ./../vip/uart_vip/uart_agent.sv(43) @ 0: uvm_test_top.env.uart_agt [build_phase] Exiting...
+# UVM_INFO ./../vip/uart_vip/uart_driver.sv(19) @ 0: uvm_test_top.env.uart_agt.drv [build_phase] Entered...
+# UVM_INFO ./../vip/uart_vip/uart_driver.sv(30) @ 0: uvm_test_top.env.uart_agt.drv [build_phase] Exiting...
+# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(20) @ 0: uvm_test_top.env.uart_agt.mnt [build_phase] Entered...
+# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(31) @ 0: uvm_test_top.env.uart_agt.mnt [build_phase] Exiting...
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(579) @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------------------
+# Name                           Type                                  Size  Value
+# --------------------------------------------------------------------------------
+# uvm_test_top                   error_reserved_test                   -     @347 
+#   env                          uart_environment                      -     @364 
+#     ahb_agt                    ahb_agent                             -     @399 
+#       drv                      ahb_driver                            -     @511 
+#         rsp_port               uvm_analysis_port                     -     @530 
+#         seq_item_port          uvm_seq_item_pull_port                -     @520 
+#       mnt                      ahb_monitor                           -     @677 
+#         ahb_observed_port      uvm_analysis_port                     -     @686 
+#       seq                      ahb_sequencer                         -     @540 
+#         rsp_export             uvm_analysis_export                   -     @549 
+#         seq_item_export        uvm_seq_item_pull_imp                 -     @667 
+#         arbitration_queue      array                                 0     -    
+#         lock_queue             array                                 0     -    
+#         num_last_reqs          integral                              32    'd1  
+#         num_last_rsps          integral                              32    'd1  
+#     ahb_predictor              uvm_reg_predictor #(ahb_transaction)  -     @417 
+#       bus_in                   uvm_analysis_imp                      -     @426 
+#       reg_ap                   uvm_analysis_port                     -     @436 
+#     scb                        uart_scoreboard                       -     @408 
+#       ahb_export               uvm_analysis_imp_ahb                  -     @738 
+#       uart_rx_export           uvm_analysis_imp_rx                   -     @728 
+#       uart_tx_export           uvm_analysis_imp_tx                   -     @718 
+#     uart_agt                   uart_agent                            -     @390 
+#       drv                      uart_driver                           -     @896 
+#         item_observed_port     uvm_analysis_port                     -     @925 
+#         rsp_port               uvm_analysis_port                     -     @915 
+#         seq_item_port          uvm_seq_item_pull_port                -     @905 
+#       mnt                      uart_monitor                          -     @935 
+#         uart_observed_port_rx  uvm_analysis_port                     -     @954 
+#         uart_observed_port_tx  uvm_analysis_port                     -     @944 
+#       seq                      uart_sequencer                        -     @759 
+#         rsp_export             uvm_analysis_export                   -     @768 
+#         seq_item_export        uvm_seq_item_pull_imp                 -     @886 
+#         arbitration_queue      array                                 0     -    
+#         lock_queue             array                                 0     -    
+#         num_last_reqs          integral                              32    'd1  
+#         num_last_rsps          integral                              32    'd1  
+# --------------------------------------------------------------------------------
+# 
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(35) @ 0: uvm_test_top.env.uart_agt.mnt [run_phase] Entered...
+# UVM_INFO ./../vip/uart_vip/uart_driver.sv(34) @ 0: uvm_test_top.env.uart_agt.drv [run_phase] Entered...
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(25) @ 0: uvm_test_top.env.ahb_agt.mnt [run_phase] Entered...
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(22) @ 0: uvm_test_top.env.ahb_agt.drv [run_phase] Entered...
+# ============================================================================================================================
+# ==========================================  ### ERROR HANDLING | RESERVED  ###  ============================================
+# ============================================================================================================================
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(9) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(17) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Transaction randomize is: 
+# -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1100                                          
+#   xact_type                    xact_type_enum   1     WRITE                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h28c                                          
+#   data                         integral         32    'h9a22494a                                     
+#   prot                         integral         4     'hc                                            
+#   lock                         integral         1     'h0                                            
+#   resp                         integral         1     'h0                                            
+#   begin_time                   time             64    10000                                          
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           18    write_reserved_seq                             
+#   parent sequence (full name)  string           47    uvm_test_top.env.ahb_agt.seq.write_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                   
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1026     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h28c     
+#   data        integral         32    'h9a22494a
+#   prot        integral         4     'hc       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x28c, data = 0x9a22494a, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(182) @ 10000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(187) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 28c, data = 9a22494a
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(23) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(9) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(17) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Transaction randomize is: 
+# -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1131                                          
+#   xact_type                    xact_type_enum   1     WRITE                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h388                                          
+#   data                         integral         32    'h64675e93                                     
+#   prot                         integral         4     'hc                                            
+#   lock                         integral         1     'h0                                            
+#   resp                         integral         1     'h0                                            
+#   begin_time                   time             64    10000                                          
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           18    write_reserved_seq                             
+#   parent sequence (full name)  string           47    uvm_test_top.env.ahb_agt.seq.write_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                   
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1115     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h388     
+#   data        integral         32    'h64675e93
+#   prot        integral         4     'hc       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x388, data = 0x64675e93, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(182) @ 10000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(187) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 388, data = 64675e93
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(23) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(9) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(17) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Transaction randomize is: 
+# -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1161                                          
+#   xact_type                    xact_type_enum   1     WRITE                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h320                                          
+#   data                         integral         32    'h9e44a8f8                                     
+#   prot                         integral         4     'h9                                            
+#   lock                         integral         1     'h0                                            
+#   resp                         integral         1     'h0                                            
+#   begin_time                   time             64    10000                                          
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           18    write_reserved_seq                             
+#   parent sequence (full name)  string           47    uvm_test_top.env.ahb_agt.seq.write_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                   
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1145     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h320     
+#   data        integral         32    'h9e44a8f8
+#   prot        integral         4     'h9       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x320, data = 0x9e44a8f8, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(182) @ 10000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(187) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 320, data = 9e44a8f8
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(23) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(9) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(17) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Transaction randomize is: 
+# -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1191                                          
+#   xact_type                    xact_type_enum   1     WRITE                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h370                                          
+#   data                         integral         32    'ha116a72f                                     
+#   prot                         integral         4     'ha                                            
+#   lock                         integral         1     'h0                                            
+#   resp                         integral         1     'h0                                            
+#   begin_time                   time             64    10000                                          
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           18    write_reserved_seq                             
+#   parent sequence (full name)  string           47    uvm_test_top.env.ahb_agt.seq.write_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                   
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1175     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h370     
+#   data        integral         32    'ha116a72f
+#   prot        integral         4     'ha       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x370, data = 0xa116a72f, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(182) @ 10000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(187) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 370, data = a116a72f
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(23) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(9) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(17) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Transaction randomize is: 
+# -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1221                                          
+#   xact_type                    xact_type_enum   1     WRITE                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h250                                          
+#   data                         integral         32    'h3356c907                                     
+#   prot                         integral         4     'h5                                            
+#   lock                         integral         1     'h0                                            
+#   resp                         integral         1     'h0                                            
+#   begin_time                   time             64    10000                                          
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           18    write_reserved_seq                             
+#   parent sequence (full name)  string           47    uvm_test_top.env.ahb_agt.seq.write_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                   
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1205     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h250     
+#   data        integral         32    'h3356c907
+#   prot        integral         4     'h5       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x250, data = 0x3356c907, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(182) @ 10000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(187) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 250, data = 3356c907
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(23) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(9) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(17) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Transaction randomize is: 
+# -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1251                                          
+#   xact_type                    xact_type_enum   1     WRITE                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h3c8                                          
+#   data                         integral         32    'h830a385d                                     
+#   prot                         integral         4     'ha                                            
+#   lock                         integral         1     'h0                                            
+#   resp                         integral         1     'h0                                            
+#   begin_time                   time             64    10000                                          
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           18    write_reserved_seq                             
+#   parent sequence (full name)  string           47    uvm_test_top.env.ahb_agt.seq.write_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                   
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1235     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h3c8     
+#   data        integral         32    'h830a385d
+#   prot        integral         4     'ha       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x3c8, data = 0x830a385d, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(182) @ 10000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(187) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 3c8, data = 830a385d
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(23) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(9) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(17) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Transaction randomize is: 
+# -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1281                                          
+#   xact_type                    xact_type_enum   1     WRITE                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h2e8                                          
+#   data                         integral         32    'hea6ffaf                                      
+#   prot                         integral         4     'hb                                            
+#   lock                         integral         1     'h0                                            
+#   resp                         integral         1     'h0                                            
+#   begin_time                   time             64    10000                                          
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           18    write_reserved_seq                             
+#   parent sequence (full name)  string           47    uvm_test_top.env.ahb_agt.seq.write_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                   
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1265     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h2e8     
+#   data        integral         32    'hea6ffaf 
+#   prot        integral         4     'hb       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x2e8, data = 0xea6ffaf, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(182) @ 10000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(187) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 2e8, data = ea6ffaf
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(23) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(9) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(17) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Transaction randomize is: 
+# -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1311                                          
+#   xact_type                    xact_type_enum   1     WRITE                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h1ac                                          
+#   data                         integral         32    'h60eaa431                                     
+#   prot                         integral         4     'h9                                            
+#   lock                         integral         1     'h0                                            
+#   resp                         integral         1     'h0                                            
+#   begin_time                   time             64    10000                                          
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           18    write_reserved_seq                             
+#   parent sequence (full name)  string           47    uvm_test_top.env.ahb_agt.seq.write_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                   
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 10000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1295     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1ac     
+#   data        integral         32    'h60eaa431
+#   prot        integral         4     'h9       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x1ac, data = 0x60eaa431, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(182) @ 10000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(187) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 10000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 1ac, data = 60eaa431
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(23) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(9) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(17) @ 10000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Transaction randomize is: 
+# -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1341                                          
+#   xact_type                    xact_type_enum   1     WRITE                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h2f0                                          
+#   data                         integral         32    'h5f8bb933                                     
+#   prot                         integral         4     'he                                            
+#   lock                         integral         1     'h0                                            
+#   resp                         integral         1     'h0                                            
+#   begin_time                   time             64    10000                                          
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           18    write_reserved_seq                             
+#   parent sequence (full name)  string           47    uvm_test_top.env.ahb_agt.seq.write_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                   
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1325     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h2f0     
+#   data        integral         32    'h5f8bb933
+#   prot        integral         4     'he       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x2f0, data = 0x5f8bb933, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(182) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(187) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 2f0, data = 5f8bb933
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Transaction randomize is: 
+# -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1371                                          
+#   xact_type                    xact_type_enum   1     WRITE                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h1a8                                          
+#   data                         integral         32    'hb4b84945                                     
+#   prot                         integral         4     'he                                            
+#   lock                         integral         1     'h0                                            
+#   resp                         integral         1     'h0                                            
+#   begin_time                   time             64    11000                                          
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           18    write_reserved_seq                             
+#   parent sequence (full name)  string           47    uvm_test_top.env.ahb_agt.seq.write_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                   
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1355     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1a8     
+#   data        integral         32    'hb4b84945
+#   prot        integral         4     'he       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x1a8, data = 0xb4b84945, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(182) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(187) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 1, Act: 1
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 1a8, data = b4b84945
+# UVM_INFO ./../sequences/write_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Transaction randomize is: 
+# ----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                         
+# ----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1403                                         
+#   xact_type                    xact_type_enum   1     READ                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                    
+#   burst_type                   burst_type_enum  3     SINGLE                                        
+#   addr                         integral         10    'h1cc                                         
+#   data                         integral         32    'hdf311ad3                                    
+#   prot                         integral         4     'ha                                           
+#   lock                         integral         1     'h0                                           
+#   resp                         integral         1     'h0                                           
+#   begin_time                   time             64    11000                                         
+#   depth                        int              32    'd2                                           
+#   parent sequence (name)       string           17    read_reserved_seq                             
+#   parent sequence (full name)  string           46    uvm_test_top.env.ahb_agt.seq.read_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                  
+# ----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1385     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1cc     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'ha       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x1cc, data = 0xffffffff, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(165) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(172) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! HRESP and DATA are matching. (RESP) Exp: 1, Act: 1 | (DATA) Exp: ffffffff, Act: ffffffff
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 1cc, data = df311ad3
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Transaction randomize is: 
+# ----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                         
+# ----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1433                                         
+#   xact_type                    xact_type_enum   1     READ                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                    
+#   burst_type                   burst_type_enum  3     SINGLE                                        
+#   addr                         integral         10    'h194                                         
+#   data                         integral         32    'hd794b229                                    
+#   prot                         integral         4     'h3                                           
+#   lock                         integral         1     'h0                                           
+#   resp                         integral         1     'h0                                           
+#   begin_time                   time             64    11000                                         
+#   depth                        int              32    'd2                                           
+#   parent sequence (name)       string           17    read_reserved_seq                             
+#   parent sequence (full name)  string           46    uvm_test_top.env.ahb_agt.seq.read_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                  
+# ----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1417     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h194     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h3       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x194, data = 0xffffffff, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(165) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(172) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! HRESP and DATA are matching. (RESP) Exp: 1, Act: 1 | (DATA) Exp: ffffffff, Act: ffffffff
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 194, data = d794b229
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Transaction randomize is: 
+# ----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                         
+# ----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1463                                         
+#   xact_type                    xact_type_enum   1     READ                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                    
+#   burst_type                   burst_type_enum  3     SINGLE                                        
+#   addr                         integral         10    'h198                                         
+#   data                         integral         32    'h98305b44                                    
+#   prot                         integral         4     'h8                                           
+#   lock                         integral         1     'h0                                           
+#   resp                         integral         1     'h0                                           
+#   begin_time                   time             64    11000                                         
+#   depth                        int              32    'd2                                           
+#   parent sequence (name)       string           17    read_reserved_seq                             
+#   parent sequence (full name)  string           46    uvm_test_top.env.ahb_agt.seq.read_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                  
+# ----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1447     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h198     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h8       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x198, data = 0xffffffff, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(165) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(172) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! HRESP and DATA are matching. (RESP) Exp: 1, Act: 1 | (DATA) Exp: ffffffff, Act: ffffffff
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 198, data = 98305b44
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Transaction randomize is: 
+# ----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                         
+# ----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1493                                         
+#   xact_type                    xact_type_enum   1     READ                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                    
+#   burst_type                   burst_type_enum  3     SINGLE                                        
+#   addr                         integral         10    'h190                                         
+#   data                         integral         32    'hdde2478e                                    
+#   prot                         integral         4     'h8                                           
+#   lock                         integral         1     'h0                                           
+#   resp                         integral         1     'h0                                           
+#   begin_time                   time             64    11000                                         
+#   depth                        int              32    'd2                                           
+#   parent sequence (name)       string           17    read_reserved_seq                             
+#   parent sequence (full name)  string           46    uvm_test_top.env.ahb_agt.seq.read_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                  
+# ----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1477     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h190     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h8       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x190, data = 0xffffffff, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(165) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(172) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! HRESP and DATA are matching. (RESP) Exp: 1, Act: 1 | (DATA) Exp: ffffffff, Act: ffffffff
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 190, data = dde2478e
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Transaction randomize is: 
+# ----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                         
+# ----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1523                                         
+#   xact_type                    xact_type_enum   1     READ                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                    
+#   burst_type                   burst_type_enum  3     SINGLE                                        
+#   addr                         integral         10    'h360                                         
+#   data                         integral         32    'h52eec326                                    
+#   prot                         integral         4     'h9                                           
+#   lock                         integral         1     'h0                                           
+#   resp                         integral         1     'h0                                           
+#   begin_time                   time             64    11000                                         
+#   depth                        int              32    'd2                                           
+#   parent sequence (name)       string           17    read_reserved_seq                             
+#   parent sequence (full name)  string           46    uvm_test_top.env.ahb_agt.seq.read_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                  
+# ----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1507     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h360     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h9       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x360, data = 0xffffffff, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(165) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(172) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! HRESP and DATA are matching. (RESP) Exp: 1, Act: 1 | (DATA) Exp: ffffffff, Act: ffffffff
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 360, data = 52eec326
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Transaction randomize is: 
+# ----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                         
+# ----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1553                                         
+#   xact_type                    xact_type_enum   1     READ                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                    
+#   burst_type                   burst_type_enum  3     SINGLE                                        
+#   addr                         integral         10    'h160                                         
+#   data                         integral         32    'h7fd2c516                                    
+#   prot                         integral         4     'h1                                           
+#   lock                         integral         1     'h0                                           
+#   resp                         integral         1     'h0                                           
+#   begin_time                   time             64    11000                                         
+#   depth                        int              32    'd2                                           
+#   parent sequence (name)       string           17    read_reserved_seq                             
+#   parent sequence (full name)  string           46    uvm_test_top.env.ahb_agt.seq.read_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                  
+# ----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1537     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h160     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h1       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x160, data = 0xffffffff, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(165) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(172) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! HRESP and DATA are matching. (RESP) Exp: 1, Act: 1 | (DATA) Exp: ffffffff, Act: ffffffff
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 160, data = 7fd2c516
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Transaction randomize is: 
+# ----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                         
+# ----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1583                                         
+#   xact_type                    xact_type_enum   1     READ                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                    
+#   burst_type                   burst_type_enum  3     SINGLE                                        
+#   addr                         integral         10    'h8c                                          
+#   data                         integral         32    'he18094ba                                    
+#   prot                         integral         4     'h8                                           
+#   lock                         integral         1     'h0                                           
+#   resp                         integral         1     'h0                                           
+#   begin_time                   time             64    11000                                         
+#   depth                        int              32    'd2                                           
+#   parent sequence (name)       string           17    read_reserved_seq                             
+#   parent sequence (full name)  string           46    uvm_test_top.env.ahb_agt.seq.read_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                  
+# ----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1567     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h8c      
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h8       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x8c, data = 0xffffffff, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(165) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(172) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! HRESP and DATA are matching. (RESP) Exp: 1, Act: 1 | (DATA) Exp: ffffffff, Act: ffffffff
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 8c, data = e18094ba
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Transaction randomize is: 
+# ----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                         
+# ----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1613                                         
+#   xact_type                    xact_type_enum   1     READ                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                    
+#   burst_type                   burst_type_enum  3     SINGLE                                        
+#   addr                         integral         10    'h168                                         
+#   data                         integral         32    'he7dde9d3                                    
+#   prot                         integral         4     'h4                                           
+#   lock                         integral         1     'h0                                           
+#   resp                         integral         1     'h0                                           
+#   begin_time                   time             64    11000                                         
+#   depth                        int              32    'd2                                           
+#   parent sequence (name)       string           17    read_reserved_seq                             
+#   parent sequence (full name)  string           46    uvm_test_top.env.ahb_agt.seq.read_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                  
+# ----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1597     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h168     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h4       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x168, data = 0xffffffff, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(165) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(172) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! HRESP and DATA are matching. (RESP) Exp: 1, Act: 1 | (DATA) Exp: ffffffff, Act: ffffffff
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 168, data = e7dde9d3
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Transaction randomize is: 
+# ----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                         
+# ----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1643                                         
+#   xact_type                    xact_type_enum   1     READ                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                    
+#   burst_type                   burst_type_enum  3     SINGLE                                        
+#   addr                         integral         10    'h244                                         
+#   data                         integral         32    'hc32948eb                                    
+#   prot                         integral         4     'h9                                           
+#   lock                         integral         1     'h0                                           
+#   resp                         integral         1     'h0                                           
+#   begin_time                   time             64    11000                                         
+#   depth                        int              32    'd2                                           
+#   parent sequence (name)       string           17    read_reserved_seq                             
+#   parent sequence (full name)  string           46    uvm_test_top.env.ahb_agt.seq.read_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                  
+# ----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1627     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h244     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h9       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x244, data = 0xffffffff, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(165) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(172) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! HRESP and DATA are matching. (RESP) Exp: 1, Act: 1 | (DATA) Exp: ffffffff, Act: ffffffff
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 244, data = c32948eb
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Transaction randomize is: 
+# ----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                         
+# ----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1673                                         
+#   xact_type                    xact_type_enum   1     READ                                          
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                    
+#   burst_type                   burst_type_enum  3     SINGLE                                        
+#   addr                         integral         10    'h3e8                                         
+#   data                         integral         32    'hf14d380e                                    
+#   prot                         integral         4     'h9                                           
+#   lock                         integral         1     'h0                                           
+#   resp                         integral         1     'h0                                           
+#   begin_time                   time             64    11000                                         
+#   depth                        int              32    'd2                                           
+#   parent sequence (name)       string           17    read_reserved_seq                             
+#   parent sequence (full name)  string           46    uvm_test_top.env.ahb_agt.seq.read_reserved_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq                  
+# ----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1657     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h3e8     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h9       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x3e8, data = 0xffffffff, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO ./../tb/uart_scoreboard.sv(165) @ 11000: uvm_test_top.env.scb [error_reserved_compare] RESERVED RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(172) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! HRESP and DATA are matching. (RESP) Exp: 1, Act: 1 | (DATA) Exp: ffffffff, Act: ffffffff
+# ============================================================================================================================
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 3e8, data = f14d380e
+# UVM_INFO ./../sequences/read_register_reserved_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@read_reserved_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Transaction randomize is: 
+# --------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                 
+# --------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1705                                 
+#   xact_type                    xact_type_enum   1     WRITE                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                            
+#   burst_type                   burst_type_enum  3     SINGLE                                
+#   addr                         integral         10    'h10                                  
+#   data                         integral         32    'he0dcf220                            
+#   prot                         integral         4     'ha                                   
+#   lock                         integral         1     'h0                                   
+#   resp                         integral         1     'h0                                   
+#   begin_time                   time             64    11000                                 
+#   depth                        int              32    'd2                                   
+#   parent sequence (name)       string           9     write_seq                             
+#   parent sequence (full name)  string           38    uvm_test_top.env.ahb_agt.seq.write_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq          
+# --------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 10, data = e0dcf220
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1687     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h10      
+#   data        integral         32    'he0dcf220
+#   prot        integral         4     'ha       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x10, data = 0xe0dcf220, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.IER: value='he0dcf220 : updated value = 'h0
+# UVM_INFO ./../tb/uart_scoreboard.sv(195) @ 11000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/write_register_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Transaction randomize is: 
+# --------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                 
+# --------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1741                                 
+#   xact_type                    xact_type_enum   1     WRITE                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                            
+#   burst_type                   burst_type_enum  3     SINGLE                                
+#   addr                         integral         10    'h10                                  
+#   data                         integral         32    'h93b9d526                            
+#   prot                         integral         4     'hc                                   
+#   lock                         integral         1     'h0                                   
+#   resp                         integral         1     'h0                                   
+#   begin_time                   time             64    11000                                 
+#   depth                        int              32    'd2                                   
+#   parent sequence (name)       string           9     write_seq                             
+#   parent sequence (full name)  string           38    uvm_test_top.env.ahb_agt.seq.write_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq          
+# --------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 10, data = 93b9d526
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1731     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h10      
+#   data        integral         32    'h93b9d526
+#   prot        integral         4     'hc       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x10, data = 0x93b9d526, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.IER: value='h93b9d526 : updated value = 'h6
+# UVM_INFO ./../tb/uart_scoreboard.sv(195) @ 11000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/write_register_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Transaction randomize is: 
+# --------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                 
+# --------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1777                                 
+#   xact_type                    xact_type_enum   1     WRITE                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                            
+#   burst_type                   burst_type_enum  3     SINGLE                                
+#   addr                         integral         10    'h4                                   
+#   data                         integral         32    'hefbd397a                            
+#   prot                         integral         4     'h2                                   
+#   lock                         integral         1     'h0                                   
+#   resp                         integral         1     'h0                                   
+#   begin_time                   time             64    11000                                 
+#   depth                        int              32    'd2                                   
+#   parent sequence (name)       string           9     write_seq                             
+#   parent sequence (full name)  string           38    uvm_test_top.env.ahb_agt.seq.write_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq          
+# --------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 4, data = efbd397a
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1767     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h4       
+#   data        integral         32    'hefbd397a
+#   prot        integral         4     'h2       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x4, data = 0xefbd397a, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='hefbd397a : updated value = 'h7a
+# UVM_INFO ./../tb/uart_scoreboard.sv(195) @ 11000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/write_register_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Transaction randomize is: 
+# --------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                 
+# --------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1813                                 
+#   xact_type                    xact_type_enum   1     WRITE                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                            
+#   burst_type                   burst_type_enum  3     SINGLE                                
+#   addr                         integral         10    'h14                                  
+#   data                         integral         32    'h224e5bad                            
+#   prot                         integral         4     'hc                                   
+#   lock                         integral         1     'h0                                   
+#   resp                         integral         1     'h0                                   
+#   begin_time                   time             64    11000                                 
+#   depth                        int              32    'd2                                   
+#   parent sequence (name)       string           9     write_seq                             
+#   parent sequence (full name)  string           38    uvm_test_top.env.ahb_agt.seq.write_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq          
+# --------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 14, data = 224e5bad
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1803     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h14      
+#   data        integral         32    'h224e5bad
+#   prot        integral         4     'hc       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x224e5bad, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.FSR: value='h224e5bad : updated value = 'h0
+# UVM_INFO ./../sequences/write_register_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Transaction randomize is: 
+# --------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                 
+# --------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1845                                 
+#   xact_type                    xact_type_enum   1     WRITE                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                            
+#   burst_type                   burst_type_enum  3     SINGLE                                
+#   addr                         integral         10    'h8                                   
+#   data                         integral         32    'h54776bc3                            
+#   prot                         integral         4     'h5                                   
+#   lock                         integral         1     'h0                                   
+#   resp                         integral         1     'h0                                   
+#   begin_time                   time             64    11000                                 
+#   depth                        int              32    'd2                                   
+#   parent sequence (name)       string           9     write_seq                             
+#   parent sequence (full name)  string           38    uvm_test_top.env.ahb_agt.seq.write_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq          
+# --------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 11000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 8, data = 54776bc3
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 11000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1835     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h8       
+#   data        integral         32    'h54776bc3
+#   prot        integral         4     'h5       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x8, data = 0x54776bc3, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='h54776bc3 : updated value = 'hc3
+# UVM_INFO ./../tb/uart_scoreboard.sv(195) @ 11000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/write_register_sequence.sv(23) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_sequence.sv(9) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_sequence.sv(17) @ 11000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Transaction randomize is: 
+# --------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                 
+# --------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1881                                 
+#   xact_type                    xact_type_enum   1     WRITE                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                            
+#   burst_type                   burst_type_enum  3     SINGLE                                
+#   addr                         integral         10    'h1c                                  
+#   data                         integral         32    'h83a55fd1                            
+#   prot                         integral         4     'hb                                   
+#   lock                         integral         1     'h0                                   
+#   resp                         integral         1     'h0                                   
+#   begin_time                   time             64    11000                                 
+#   depth                        int              32    'd2                                   
+#   parent sequence (name)       string           9     write_seq                             
+#   parent sequence (full name)  string           38    uvm_test_top.env.ahb_agt.seq.write_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq          
+# --------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 1c, data = 83a55fd1
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1871     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1c      
+#   data        integral         32    'h83a55fd1
+#   prot        integral         4     'hb       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x1c, data = 0x83a55fd1, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.RBR: value='h83a55fd1 : updated value = 'h0
+# UVM_INFO ./../tb/uart_scoreboard.sv(195) @ 12000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/write_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Transaction randomize is: 
+# --------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                 
+# --------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1917                                 
+#   xact_type                    xact_type_enum   1     WRITE                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                            
+#   burst_type                   burst_type_enum  3     SINGLE                                
+#   addr                         integral         10    'h4                                   
+#   data                         integral         32    'h41edc344                            
+#   prot                         integral         4     'he                                   
+#   lock                         integral         1     'h0                                   
+#   resp                         integral         1     'h0                                   
+#   begin_time                   time             64    12000                                 
+#   depth                        int              32    'd2                                   
+#   parent sequence (name)       string           9     write_seq                             
+#   parent sequence (full name)  string           38    uvm_test_top.env.ahb_agt.seq.write_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq          
+# --------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 4, data = 41edc344
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1907     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h4       
+#   data        integral         32    'h41edc344
+#   prot        integral         4     'he       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x4, data = 0x41edc344, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='h41edc344 : updated value = 'h44
+# UVM_INFO ./../tb/uart_scoreboard.sv(195) @ 12000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/write_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Transaction randomize is: 
+# --------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                 
+# --------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1953                                 
+#   xact_type                    xact_type_enum   1     WRITE                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                            
+#   burst_type                   burst_type_enum  3     SINGLE                                
+#   addr                         integral         10    'h1c                                  
+#   data                         integral         32    'h258d81f8                            
+#   prot                         integral         4     'hf                                   
+#   lock                         integral         1     'h0                                   
+#   resp                         integral         1     'h0                                   
+#   begin_time                   time             64    12000                                 
+#   depth                        int              32    'd2                                   
+#   parent sequence (name)       string           9     write_seq                             
+#   parent sequence (full name)  string           38    uvm_test_top.env.ahb_agt.seq.write_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq          
+# --------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 1c, data = 258d81f8
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1943     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1c      
+#   data        integral         32    'h258d81f8
+#   prot        integral         4     'hf       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x1c, data = 0x258d81f8, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.RBR: value='h258d81f8 : updated value = 'h0
+# UVM_INFO ./../tb/uart_scoreboard.sv(195) @ 12000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/write_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Transaction randomize is: 
+# --------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                 
+# --------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @1989                                 
+#   xact_type                    xact_type_enum   1     WRITE                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                            
+#   burst_type                   burst_type_enum  3     SINGLE                                
+#   addr                         integral         10    'h18                                  
+#   data                         integral         32    'h10d09579                            
+#   prot                         integral         4     'hc                                   
+#   lock                         integral         1     'h0                                   
+#   resp                         integral         1     'h0                                   
+#   begin_time                   time             64    12000                                 
+#   depth                        int              32    'd2                                   
+#   parent sequence (name)       string           9     write_seq                             
+#   parent sequence (full name)  string           38    uvm_test_top.env.ahb_agt.seq.write_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq          
+# --------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 18, data = 10d09579
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @1979     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h18      
+#   data        integral         32    'h10d09579
+#   prot        integral         4     'hc       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x18, data = 0x10d09579, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h10d09579 : updated value = 'h79
+# UVM_INFO ./../tb/uart_scoreboard.sv(82) @ 12000: uvm_test_top.env.scb [write_rx] Add AHB's drive trans into queue
+# UVM_INFO ./../sequences/write_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Exiting...
+# UVM_INFO ./../sequences/write_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Entered...
+# UVM_INFO ./../sequences/write_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Transaction randomize is: 
+# --------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                 
+# --------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @2023                                 
+#   xact_type                    xact_type_enum   1     WRITE                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                            
+#   burst_type                   burst_type_enum  3     SINGLE                                
+#   addr                         integral         10    'h0                                   
+#   data                         integral         32    'hccff0140                            
+#   prot                         integral         4     'h6                                   
+#   lock                         integral         1     'h0                                   
+#   resp                         integral         1     'h0                                   
+#   begin_time                   time             64    12000                                 
+#   depth                        int              32    'd2                                   
+#   parent sequence (name)       string           9     write_seq                             
+#   parent sequence (full name)  string           38    uvm_test_top.env.ahb_agt.seq.write_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq          
+# --------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(65) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] WRITE! addr = 0, data = ccff0140
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @2013     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h0       
+#   data        integral         32    'hccff0140
+#   prot        integral         4     'h6       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x0, data = 0xccff0140, kind = UVM_WRITE, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='hccff0140 : updated value = 'h0
+# UVM_INFO ./../tb/uart_scoreboard.sv(195) @ 12000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | WRITE
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/write_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@write_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Transaction randomize is: 
+# -------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                
+# -------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @2061                                
+#   xact_type                    xact_type_enum   1     READ                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                           
+#   burst_type                   burst_type_enum  3     SINGLE                               
+#   addr                         integral         10    'h4                                  
+#   data                         integral         32    'h444bf6ac                           
+#   prot                         integral         4     'h5                                  
+#   lock                         integral         1     'h0                                  
+#   resp                         integral         1     'h0                                  
+#   begin_time                   time             64    12000                                
+#   depth                        int              32    'd2                                  
+#   parent sequence (name)       string           8     read_seq                             
+#   parent sequence (full name)  string           37    uvm_test_top.env.ahb_agt.seq.read_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq         
+# -------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 4, data = 444bf6ac
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @2049     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h4       
+#   data        integral         32    'h44      
+#   prot        integral         4     'h5       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x4, data = 0x44, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.DLL: value='h44
+# UVM_INFO ./../tb/uart_scoreboard.sv(196) @ 12000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/read_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Transaction randomize is: 
+# -------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                
+# -------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @2097                                
+#   xact_type                    xact_type_enum   1     READ                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                           
+#   burst_type                   burst_type_enum  3     SINGLE                               
+#   addr                         integral         10    'h1c                                 
+#   data                         integral         32    'ha4367478                           
+#   prot                         integral         4     'ha                                  
+#   lock                         integral         1     'h0                                  
+#   resp                         integral         1     'h0                                  
+#   begin_time                   time             64    12000                                
+#   depth                        int              32    'd2                                  
+#   parent sequence (name)       string           8     read_seq                             
+#   parent sequence (full name)  string           37    uvm_test_top.env.ahb_agt.seq.read_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq         
+# -------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 1c, data = a4367478
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @2087     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1c      
+#   data        integral         32    'h0       
+#   prot        integral         4     'ha       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x1c, data = 0x0, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.RBR: value='h0
+# UVM_INFO ./../sequences/read_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Transaction randomize is: 
+# -------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                
+# -------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @2129                                
+#   xact_type                    xact_type_enum   1     READ                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                           
+#   burst_type                   burst_type_enum  3     SINGLE                               
+#   addr                         integral         10    'h10                                 
+#   data                         integral         32    'hec09aa71                           
+#   prot                         integral         4     'h7                                  
+#   lock                         integral         1     'h0                                  
+#   resp                         integral         1     'h0                                  
+#   begin_time                   time             64    12000                                
+#   depth                        int              32    'd2                                  
+#   parent sequence (name)       string           8     read_seq                             
+#   parent sequence (full name)  string           37    uvm_test_top.env.ahb_agt.seq.read_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq         
+# -------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 10, data = ec09aa71
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @2119     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h10      
+#   data        integral         32    'h6       
+#   prot        integral         4     'h7       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x10, data = 0x6, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.IER: value='h6
+# UVM_INFO ./../tb/uart_scoreboard.sv(196) @ 12000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/read_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Transaction randomize is: 
+# -------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                
+# -------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @2165                                
+#   xact_type                    xact_type_enum   1     READ                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                           
+#   burst_type                   burst_type_enum  3     SINGLE                               
+#   addr                         integral         10    'h1c                                 
+#   data                         integral         32    'h89a11e7e                           
+#   prot                         integral         4     'h6                                  
+#   lock                         integral         1     'h0                                  
+#   resp                         integral         1     'h0                                  
+#   begin_time                   time             64    12000                                
+#   depth                        int              32    'd2                                  
+#   parent sequence (name)       string           8     read_seq                             
+#   parent sequence (full name)  string           37    uvm_test_top.env.ahb_agt.seq.read_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq         
+# -------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 1c, data = 89a11e7e
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @2155     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1c      
+#   data        integral         32    'h0       
+#   prot        integral         4     'h6       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x1c, data = 0x0, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.RBR: value='h0
+# UVM_INFO ./../sequences/read_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Transaction randomize is: 
+# -------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                
+# -------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @2197                                
+#   xact_type                    xact_type_enum   1     READ                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                           
+#   burst_type                   burst_type_enum  3     SINGLE                               
+#   addr                         integral         10    'h1c                                 
+#   data                         integral         32    'h21dc883e                           
+#   prot                         integral         4     'h3                                  
+#   lock                         integral         1     'h0                                  
+#   resp                         integral         1     'h0                                  
+#   begin_time                   time             64    12000                                
+#   depth                        int              32    'd2                                  
+#   parent sequence (name)       string           8     read_seq                             
+#   parent sequence (full name)  string           37    uvm_test_top.env.ahb_agt.seq.read_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq         
+# -------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 1c, data = 21dc883e
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @2187     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1c      
+#   data        integral         32    'h0       
+#   prot        integral         4     'h3       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x1c, data = 0x0, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.RBR: value='h0
+# UVM_INFO ./../sequences/read_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Transaction randomize is: 
+# -------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                
+# -------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @2229                                
+#   xact_type                    xact_type_enum   1     READ                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                           
+#   burst_type                   burst_type_enum  3     SINGLE                               
+#   addr                         integral         10    'h0                                  
+#   data                         integral         32    'hf85d1aec                           
+#   prot                         integral         4     'hc                                  
+#   lock                         integral         1     'h0                                  
+#   resp                         integral         1     'h0                                  
+#   begin_time                   time             64    12000                                
+#   depth                        int              32    'd2                                  
+#   parent sequence (name)       string           8     read_seq                             
+#   parent sequence (full name)  string           37    uvm_test_top.env.ahb_agt.seq.read_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq         
+# -------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 0, data = f85d1aec
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @2219     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h0       
+#   data        integral         32    'h0       
+#   prot        integral         4     'hc       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x0, data = 0x0, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.MDR: value='h0
+# UVM_INFO ./../tb/uart_scoreboard.sv(196) @ 12000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/read_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Transaction randomize is: 
+# -------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                
+# -------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @2265                                
+#   xact_type                    xact_type_enum   1     READ                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                           
+#   burst_type                   burst_type_enum  3     SINGLE                               
+#   addr                         integral         10    'h4                                  
+#   data                         integral         32    'h48f0641d                           
+#   prot                         integral         4     'h9                                  
+#   lock                         integral         1     'h0                                  
+#   resp                         integral         1     'h0                                  
+#   begin_time                   time             64    12000                                
+#   depth                        int              32    'd2                                  
+#   parent sequence (name)       string           8     read_seq                             
+#   parent sequence (full name)  string           37    uvm_test_top.env.ahb_agt.seq.read_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq         
+# -------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 4, data = 48f0641d
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @2255     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h4       
+#   data        integral         32    'h44      
+#   prot        integral         4     'h9       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x4, data = 0x44, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.DLL: value='h44
+# UVM_INFO ./../tb/uart_scoreboard.sv(196) @ 12000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/read_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Transaction randomize is: 
+# -------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                
+# -------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @2301                                
+#   xact_type                    xact_type_enum   1     READ                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                           
+#   burst_type                   burst_type_enum  3     SINGLE                               
+#   addr                         integral         10    'h1c                                 
+#   data                         integral         32    'h2ae5a9cb                           
+#   prot                         integral         4     'h5                                  
+#   lock                         integral         1     'h0                                  
+#   resp                         integral         1     'h0                                  
+#   begin_time                   time             64    12000                                
+#   depth                        int              32    'd2                                  
+#   parent sequence (name)       string           8     read_seq                             
+#   parent sequence (full name)  string           37    uvm_test_top.env.ahb_agt.seq.read_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq         
+# -------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 1c, data = 2ae5a9cb
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @2291     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1c      
+#   data        integral         32    'h0       
+#   prot        integral         4     'h5       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x1c, data = 0x0, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.RBR: value='h0
+# UVM_INFO ./../sequences/read_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Transaction randomize is: 
+# -------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                
+# -------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @2333                                
+#   xact_type                    xact_type_enum   1     READ                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                           
+#   burst_type                   burst_type_enum  3     SINGLE                               
+#   addr                         integral         10    'h10                                 
+#   data                         integral         32    'h967b9909                           
+#   prot                         integral         4     'hb                                  
+#   lock                         integral         1     'h0                                  
+#   resp                         integral         1     'h0                                  
+#   begin_time                   time             64    12000                                
+#   depth                        int              32    'd2                                  
+#   parent sequence (name)       string           8     read_seq                             
+#   parent sequence (full name)  string           37    uvm_test_top.env.ahb_agt.seq.read_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq         
+# -------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 10, data = 967b9909
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @2323     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h10      
+#   data        integral         32    'h6       
+#   prot        integral         4     'hb       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x10, data = 0x6, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.IER: value='h6
+# UVM_INFO ./../tb/uart_scoreboard.sv(196) @ 12000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/read_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Exiting...
+# UVM_INFO ./../sequences/read_register_sequence.sv(9) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Entered...
+# UVM_INFO ./../sequences/read_register_sequence.sv(17) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Transaction randomize is: 
+# -------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                
+# -------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @2369                                
+#   xact_type                    xact_type_enum   1     READ                                 
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                           
+#   burst_type                   burst_type_enum  3     SINGLE                               
+#   addr                         integral         10    'h8                                  
+#   data                         integral         32    'h4bff1ac8                           
+#   prot                         integral         4     'h2                                  
+#   lock                         integral         1     'h0                                  
+#   resp                         integral         1     'h0                                  
+#   begin_time                   time             64    12000                                
+#   depth                        int              32    'd2                                  
+#   parent sequence (name)       string           8     read_seq                             
+#   parent sequence (full name)  string           37    uvm_test_top.env.ahb_agt.seq.read_seq
+#   sequencer                    string           28    uvm_test_top.env.ahb_agt.seq         
+# -------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../vip/ahb_vip/ahb_driver.sv(63) @ 12000: uvm_test_top.env.ahb_agt.drv [ahb_driver] READ! addr = 8, data = 4bff1ac8
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(46) @ 12000: uvm_test_top.env.ahb_agt.mnt [ahb_monitor] Observed transaction: 
+# -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# trans         ahb_transaction  -     @2359     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h8       
+#   data        integral         32    'hc3      
+#   prot        integral         4     'h2       
+#   lock        integral         1     'h0       
+#   resp        integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 12000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x8, data = 0xc3, kind = UVM_READ, status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 12000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.DLH: value='hc3
+# UVM_INFO ./../tb/uart_scoreboard.sv(196) @ 12000: uvm_test_top.env.scb [error_availble_compare] AVAILBLE  RESP COMPARATIVE | READ
+# ============================================================================================================================
+# UVM_INFO ./../tb/uart_scoreboard.sv(201) @ 12000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Signal is matching. Exp: 0, Act: 0
+# ============================================================================================================================
+# UVM_INFO ./../sequences/read_register_sequence.sv(23) @ 12000: uvm_test_top.env.ahb_agt.seq@@read_seq [body] Exiting...
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 13000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ./../testcases/uart_base_test.sv(59) @ 13000: uvm_test_top [final_phase] Entered...
+# 
+# =====================================================
+#             #### Status: TEST PASSED ####              
+# 
+# =====================================================
+# UVM_INFO ./../testcases/uart_base_test.sv(70) @ 13000: uvm_test_top [final_phase] Exiting...
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_catcher.svh(705) @ 13000: reporter [UVM/REPORT/CATCHER] 
+# --- UVM Report catcher Summary ---
+# 
+# 
+# Number of demoted UVM_FATAL reports  :    0
+# Number of demoted UVM_ERROR reports  :    0
+# Number of demoted UVM_WARNING reports:    0
+# Number of caught UVM_FATAL reports   :    0
+# Number of caught UVM_ERROR reports   :    0
+# Number of caught UVM_WARNING reports :    0
+# 
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 13000: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  362
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [NO_DPI_TSTNAME]     1
+# [REG_PREDICT]    20
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVM/COMP/NAMECHECK]     1
+# [UVM/RELNOTES]     1
+# [UVM/REPORT/CATCHER]     1
+# [UVMTOP]     1
+# [ahb_agent]     1
+# [ahb_driver]    40
+# [ahb_monitor]    40
+# [body]   120
+# [build phase]     1
+# [build_phase]    17
+# [error_availble_compare]    14
+# [error_reserved_compare]    20
+# [final_phase]     2
+# [run_phase]     4
+# [uart_agent]     1
+# [uart_reg2ahb_adapter]    40
+# [uart_scoreboard]    34
+# [write_rx]     1
+# 
+# ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 12705 ns  Iteration: 68  Instance: /testbench
+# End time: 11:55:41 on Aug 03,2026, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0

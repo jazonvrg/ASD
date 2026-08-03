@@ -51,6 +51,10 @@ package test_pkg;
 	`include "empty_tx_fifo_test.sv"
 	`include "full_tx_fifo_test.sv"
 
+	// Error handling
+	`include "error_reserved_test.sv"
+	`include "error_full_tx_fifo_test.sv"
+
 endpackage: test_pkg
 
 `endif

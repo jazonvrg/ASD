@@ -104,7 +104,7 @@ class empty_rx_fifo_test extends uart_base_test;
 		regmodel.FSR.read(status, rdata);
 		// empty_status = 0
 		env.scb.selection = 4.2;	
-		n = $urandom_range(1, 10);
+		n = $urandom_range(1, 15);
 		wait_time(cfg);
 		repeat (n) begin
 			seq.start(env.uart_agt.seq);

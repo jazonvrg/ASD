@@ -1,7 +1,7 @@
 # vsim -sv_seed 2 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l empty_tx_fifo_test_2.log "+UVM_TESTNAME=empty_tx_fifo_test" "+UVM_VERBOSITY=UVM_HIGH" 
-# Start time: 22:56:02 on Aug 01,2026
-# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_66589/linux_x86_64_gcc-11/export_tramp.so
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 14:35:25 on Aug 02,2026
+# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_75632/linux_x86_64_gcc-11/export_tramp.so
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim-64
 # //  Version 10.6d_1 linux_x86_64 Apr 11 2018
 # //
@@ -41,9 +41,9 @@
 # Loading work.uart_receiver(fast)
 # Loading work.uart_interrupt(fast)
 # Loading work.baud_generator(fast)
-# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_66589/linux_x86_64_gcc-5.3.0/exportwrapper.c
-# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_66589/linux_x86_64_gcc-11/exportwrapper.c
-# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_66589/linux_x86_64_gcc-11/vsim_auto_compile.so
+# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_75632/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_75632/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/vannghia_1108@ictc-eda-ldap.ipa.test_dpi_75632/linux_x86_64_gcc-11/vsim_auto_compile.so
 #  log -r /*
 # run -all
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
@@ -274,8 +274,9 @@
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='ha
 # UVM_INFO ./../tb/uart_scoreboard.sv(138) @ 10000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# size = 0
 # ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 1, Act: 1
+# UVM_INFO ./../tb/uart_scoreboard.sv(156) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 1, Act: 1
 # ============================================================================================================================
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO @ 10000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=a
@@ -319,8 +320,9 @@
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 10000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='ha
 # UVM_INFO ./../tb/uart_scoreboard.sv(138) @ 10000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# size = 1
 # ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 1, Act: 1
+# UVM_INFO ./../tb/uart_scoreboard.sv(156) @ 10000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 1, Act: 1
 # ============================================================================================================================
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 10000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO @ 10000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=a
@@ -364,8 +366,9 @@
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
 # UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# size = 2
 # ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# UVM_INFO ./../tb/uart_scoreboard.sv(156) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
 # ============================================================================================================================
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
@@ -409,8 +412,9 @@
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
 # UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# size = 3
 # ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# UVM_INFO ./../tb/uart_scoreboard.sv(156) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
 # ============================================================================================================================
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
@@ -454,8 +458,9 @@
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 11000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='h8
 # UVM_INFO ./../tb/uart_scoreboard.sv(133) @ 11000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# size = 4
 # ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
+# UVM_INFO ./../tb/uart_scoreboard.sv(156) @ 11000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 0, Act: 0
 # ============================================================================================================================
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 11000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0x8, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO @ 11000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=8
@@ -498,8 +503,9 @@
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 4011000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 4011000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.FSR: value='ha
 # UVM_INFO ./../tb/uart_scoreboard.sv(138) @ 4011000: uvm_test_top.env.scb [empty_tx_fifo_compare] EMPTY TX FIFO COMPARATIVE
+# size = 1
 # ============================================================================================================================
-# UVM_INFO ./../tb/uart_scoreboard.sv(155) @ 4011000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 1, Act: 1
+# UVM_INFO ./../tb/uart_scoreboard.sv(156) @ 4011000: uvm_test_top.env.scb [uart_scoreboard] PASSED! Parity error status is correct. Exp: 1, Act: 1
 # ============================================================================================================================
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 4011000: reporter [uart_reg2ahb_adapter] bus2reg: addr = 0x14, data = 0xa, kind = UVM_READ, status = UVM_IS_OK
 # UVM_INFO @ 4011000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.FSR=a
@@ -555,5 +561,5 @@
 # 
 # ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
 #    Time: 4010805 ns  Iteration: 70  Instance: /testbench
-# End time: 22:56:04 on Aug 01,2026, Elapsed time: 0:00:02
+# End time: 14:35:29 on Aug 02,2026, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0

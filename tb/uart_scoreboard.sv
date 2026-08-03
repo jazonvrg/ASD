@@ -17,18 +17,22 @@ class uart_scoreboard extends uvm_scoreboard;
 	//logic parity_error_flag, rx_empty_flag, rx_full_flag, tx_empty_flag, tx_full_flag;
 	logic exp_FSR, act_FSR;
 	logic [`AHB_DATA_WIDTH-1:0] exp_ahb, act_ahb;
+	logic exp_resp, act_resp;
 	//logic bge_status;
 	logic en_fc = 1'b1;
 
 	// selection = 0 - default
-	//             1 - full_tx      1.1 LOW   -   1.2 HIGH
-	//             2 - empty_txi    2.1 HIGH  -   2.2 LOW
-	//             3 - full_rx      3.1 LOW   -   3.2 HIGH
-	//             4 - empty_rx	4.1 HIGH  -   4.2 LOW
+	//             1 - full_tx          1.1 LOW   -   1.2 HIGH
+	//             2 - empty_tx         2.1 HIGH  -   2.2 LOW
+	//             3 - full_rx          3.1 LOW   -   3.2 HIGH
+	//             4 - empty_rx	    4.1 HIGH  -   4.2 LOW
 	//             5 - error_parity 
 	//             6 - normal_parity
 	//             7 - TX transfer
 	//             8 - RX transfer
+	//             9 - error_reserved   9.1 WRITE RSV  -  9.2 READ RSV  -  9.3 WRITE AVAILBLE  -  9.4 READ AVAILBLE
+	//            10 - error_full_tx   10.1 HIGH  -  10.2 LOW
+	//            11 - error_empty_rx  11.1 HIGH  -  11.2 LOW
 	real selection = 0;
 
 	function new(string name = "uart_scoreboard", uvm_component parent);
@@ -79,6 +83,29 @@ class uart_scoreboard extends uvm_scoreboard;
 		if (trans.addr == 10'h018 && trans.xact_type == ahb_transaction::WRITE) begin // TBR
 			`uvm_info("write_rx", $sformatf("Add AHB's drive trans into queue"), UVM_LOW)
 			if (q_tx.size() < 16) q_tx.push_back(trans.data[7:0]);
+			if (selection == 10.1) begin
+				`uvm_info("error_full_tx_compare", $sformatf("ERROR FULL TX FIFO COMPARATIVE"), UVM_LOW)
+				exp_resp = 1'b1;
+				act_resp = trans.resp;
+				$display("============================================================================================================================");
+				if (exp_resp == act_resp) begin
+					`uvm_info(get_type_name(), $sformatf("PASSED! Signal is matching. Exp: %0h, Act: %0h", exp_resp, act_resp), UVM_LOW);
+				end else begin
+					`uvm_error(get_type_name(), $sformatf("FAILED! Signal is not matching. Exp: %0h, Act: %0h", exp_resp, act_resp));
+				end
+				$display("============================================================================================================================");
+			end else begin
+				`uvm_info("error_full_tx_compare", $sformatf("ERROR-FREE FULL TX FIFO COMPARATIVE"), UVM_LOW)
+				exp_resp = 1'b0;
+				act_resp = trans.resp;
+				$display("============================================================================================================================");
+				if (exp_resp == act_resp) begin
+					`uvm_info(get_type_name(), $sformatf("PASSED! Signal is matching. Exp: %0h, Act: %0h", exp_resp, act_resp), UVM_LOW);
+				end else begin
+					`uvm_error(get_type_name(), $sformatf("FAILED! Signal is not matching. Exp: %0h, Act: %0h", exp_resp, act_resp));
+				end
+				$display("============================================================================================================================");
+			end
 		end else if (trans.addr == 10'h01C && trans.xact_type == ahb_transaction::READ) begin // RBR
 			mask = (1 << cfg.data_width) - 1;
 			if (q_rx.size() > 0) begin
@@ -150,39 +177,59 @@ class uart_scoreboard extends uvm_scoreboard;
 							act_FSR = trans.data[0];
 						end
 					endcase
-					$display("size = %0d", q_tx.size());
 					$display("============================================================================================================================");
 					if (exp_FSR == act_FSR) begin
-						`uvm_info(get_type_name(), $sformatf("PASSED! Parity error status is correct. Exp: %0b, Act: %0b", exp_FSR, act_FSR), UVM_LOW);
+						`uvm_info(get_type_name(), $sformatf("PASSED! Signal is matching. Exp: %0b, Act: %0b", exp_FSR, act_FSR), UVM_LOW);
 					end else begin
-						`uvm_error(get_type_name(), $sformatf("FAILED! Parity error status is not correct. Exp: %0b, Act: %0b", exp_FSR, act_FSR));
+						`uvm_error(get_type_name(), $sformatf("FAILED! Signal is not matching. Exp: %0b, Act: %0b", exp_FSR, act_FSR));
 					end
-					$display("============================================================================================================================");
-					/*`uvm_info("write_ahb", $sformatf("AHB DATA COMPARATIVE"), UVM_LOW)
-					$display("============================================================================================================================");
-					if (exp_FSR != act_FSR) begin
-						`uvm_info(get_type_name(), $sformatf("PASSED! Signal is not matching. Exp: %1b, Act: %1b", exp_FSR, act_FSR), UVM_LOW);
-					end else begin
-						`uvm_error(get_type_name(), $sformatf("FAILED! Signal is matching. Exp: %1b, Act: %1b", exp_FSR, act_FSR));
-					end
-					$display("============================================================================================================================");
-					*/
 				end
 			end
-		end /*else if (trans.addr >= 10'h020 && trans.addr <= 10'h3FF) begin
-			/*if (trans.xact_type == ahb_transaction::READ) begin
-				`uvm_info("write_ahb", $sformatf("AHB DATA COMPARATIVE"), UVM_LOW)
+		end else if (trans.addr >= 10'h020 && trans.addr <= 10'h3FF) begin
+			if (trans.xact_type == ahb_transaction::READ) begin
+				`uvm_info("error_reserved_compare", $sformatf("RESERVED RESP COMPARATIVE | READ"), UVM_LOW)
+				exp_resp = 1'b1;
+				act_resp = trans.resp;
 				exp_ahb = 32'hFFFF_FFFF;
 				act_ahb = trans.data;
 				$display("============================================================================================================================");
-				if (act_ahb == exp_ahb) begin
-					`uvm_info(get_type_name(), $sformatf("PASSED! Signal is matching. Exp: %0h, Act: %0h", exp_ahb, act_ahb), UVM_LOW);
-				end else begin
-					`uvm_error(get_type_name(), $sformatf("FAILED! Signal is not matching. Exp: %0h, Act: %0h", exp_ahb, act_ahb));
+				if (exp_resp == act_resp && exp_ahb == act_ahb) begin
+					`uvm_info(get_type_name(), $sformatf("PASSED! HRESP and DATA are matching. (RESP) Exp: %0h, Act: %0h | (DATA) Exp: %0h, Act: %0h", exp_resp, act_resp, exp_ahb, act_ahb), UVM_LOW);
+				end else if (exp_resp != act_resp && exp_ahb != act_ahb) begin
+					`uvm_error(get_type_name(), $sformatf("FAILED! HRESP and DATA are not matching. (RESP) Exp: %0h, Act: %0h | (DATA) Exp: %0h, Act: %0h", exp_resp, act_resp, exp_ahb, act_ahb));
+				end else if (exp_resp != act_resp) begin
+					`uvm_error(get_type_name(), $sformatf("FAILED! HRESP is not matching. Exp: %0h, Act: %0h", exp_resp, act_resp));
+				end else if (exp_resp != act_resp) begin
+					`uvm_error(get_type_name(), $sformatf("FAILED! DATA is not matching. Exp: %0h, Act: %0h", exp_ahb, act_ahb));
 				end
 				$display("============================================================================================================================");
-			end	
-		end*/
+			end else begin
+				`uvm_info("error_reserved_compare", $sformatf("RESERVED RESP COMPARATIVE | WRITE"), UVM_LOW)
+				exp_resp = 1'b1;
+				act_resp = trans.resp;
+				$display("============================================================================================================================");
+				if (exp_resp == act_resp) begin
+					`uvm_info(get_type_name(), $sformatf("PASSED! Signal is matching. Exp: %0h, Act: %0h", exp_resp, act_resp), UVM_LOW);
+				end else begin
+					`uvm_error(get_type_name(), $sformatf("FAILED! Signal is not matching. Exp: %0h, Act: %0h", exp_resp, act_resp));
+				end
+				$display("============================================================================================================================");
+			end
+		end else begin
+			if (selection == 9.3 || selection == 9.4) begin
+				if (selection == 9.3) `uvm_info("error_availble_compare", $sformatf("AVAILBLE RESP COMPARATIVE | WRITE"), UVM_LOW)
+				else `uvm_info("error_availble_compare", $sformatf("AVAILBLE RESP COMPARATIVE | READ"), UVM_LOW)
+				exp_resp = 1'b0;
+				act_resp = trans.resp;
+				$display("============================================================================================================================");
+				if (exp_resp == act_resp) begin
+					`uvm_info(get_type_name(), $sformatf("PASSED! Signal is matching. Exp: %0h, Act: %0h", exp_resp, act_resp), UVM_LOW);
+				end else begin
+					`uvm_error(get_type_name(), $sformatf("FAILED! Signal is not matching. Exp: %0h, Act: %0h", exp_resp, act_resp));
+				end
+				$display("============================================================================================================================");
+			end
+		end
 	endfunction: write_ahb
 
 endclass: uart_scoreboard
