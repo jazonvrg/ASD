@@ -51,6 +51,8 @@ class uart_base_test extends uvm_test;
 		#10;
 		ahb_vif.HRESETn <= 1'b1;
 		@(posedge ahb_vif.HCLK);
+		env.scb.q_tx.delete();
+		env.scb.q_rx.delete();
 	endtask: reset
 
 	virtual function void final_phase(uvm_phase phase);

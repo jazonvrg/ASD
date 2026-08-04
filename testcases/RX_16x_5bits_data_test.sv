@@ -36,7 +36,7 @@ class RX_16x_5bits_data_test extends uart_base_test;
                 				                          num_of_stop_bit == stp_bit[i_stp];
 									  ovsmpl == X16;
                                 				          parity_error == prt_error[i_error];
-             	                        				  uart_mode == TX;
+             	                        				  uart_mode == RX;
 									  baud_rate == bd_rate[i_bd];}) begin
 							`uvm_info("run_phase", $sformatf("Configuration randomize is: \n%0s", cfg.sprint()), UVM_LOW);
 						end else begin
@@ -53,7 +53,7 @@ class RX_16x_5bits_data_test extends uart_base_test;
                 				                          num_of_stop_bit == stp_bit[i_stp];
 									  ovsmpl == X16;
                                 				          parity_error == prt_error[i_error];
-             	                        				  uart_mode == TX;
+             	                        				  uart_mode == RX;
 									  baud_rate == custom_baud_rate;}) begin
 							`uvm_info("run_phase", $sformatf("Configuration randomize is: \n%0s", cfg.sprint()), UVM_LOW);
 						end else begin

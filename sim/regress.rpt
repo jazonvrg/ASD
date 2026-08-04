@@ -1,0 +1,32 @@
+###########################################################
+####               ICTC Regression Report              ####
+###########################################################
+Total testcase run: 21
+Passed            : 21
+Failed            : 0
+Unknown           : 0
+Used time         : 26m 50s
+-----------------------------------------------------------
+Run log detail:
+log/RX_13x_1_stop_bit_test_545110.log: => Passed
+log/RX_13x_2_stop_bit_test_500245.log: => Passed
+log/RX_13x_even_parity_test_927806.log: => Passed
+log/RX_13x_no_parity_test_876502.log: => Passed
+log/RX_13x_odd_parity_test_365048.log: => Passed
+log/RX_16x_1_stop_bit_test_607068.log: => Passed
+log/RX_16x_2_stop_bit_test_324687.log: => Passed
+log/RX_16x_even_parity_test_402941.log: => Passed
+log/RX_16x_no_parity_test_200220.log: => Passed
+log/RX_16x_odd_parity_test_684792.log: => Passed
+log/TX_13x_1_stop_bit_test_209801.log: => Passed
+log/TX_13x_2_stop_bit_test_407986.log: => Passed
+log/TX_13x_even_parity_test_372536.log: => Passed
+log/TX_13x_no_parity_test_760868.log: => Passed
+log/TX_13x_odd_parity_test_654805.log: => Passed
+log/TX_16x_1_stop_bit_test_1.log: => Passed
+log/TX_16x_1_stop_bit_test_930774.log: => Passed
+log/TX_16x_2_stop_bit_test_813642.log: => Passed
+log/TX_16x_even_parity_test_520879.log: => Passed
+log/TX_16x_no_parity_test_576491.log: => Passed
+log/TX_16x_odd_parity_test_223777.log: => Passed
+-----------------------------------------------------------

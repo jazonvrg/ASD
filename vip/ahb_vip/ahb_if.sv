@@ -14,5 +14,6 @@ interface ahb_if();
   logic                       HREADYOUT;
   logic                       HRESP;    
   logic                       HSEL;     
+  logic			      interrupt;
 
 endinterface

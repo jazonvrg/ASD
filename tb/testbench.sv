@@ -7,8 +7,6 @@ module testbench;
   	ahb_if ahb_vif();
 	uart_if uart_vif();
 
-	wire interrupt;
-
 	uart_top dut(// AHB Interface
 		     .HCLK(ahb_vif.HCLK),
 		     .HRESETN(ahb_vif.HRESETn),
@@ -27,7 +25,7 @@ module testbench;
 		     .uart_rxd(uart_vif.tx),
 		     .uart_txd(uart_vif.rx),
 		     // Interrupt
-		     .interrupt(interrupt)
+		     .interrupt(ahb_vif.interrupt)
 		     );
 	
 	initial begin

@@ -31,8 +31,6 @@ class uart_scoreboard extends uvm_scoreboard;
 	//             7 - TX transfer
 	//             8 - RX transfer
 	//             9 - error_reserved   9.1 WRITE RSV  -  9.2 READ RSV  -  9.3 WRITE AVAILBLE  -  9.4 READ AVAILBLE
-	//            10 - error_full_tx   10.1 HIGH  -  10.2 LOW
-	//            11 - error_empty_rx  11.1 HIGH  -  11.2 LOW
 	real selection = 0;
 
 	function new(string name = "uart_scoreboard", uvm_component parent);
@@ -94,7 +92,7 @@ class uart_scoreboard extends uvm_scoreboard;
 					`uvm_error(get_type_name(), $sformatf("FAILED! Signal is not matching. Exp: %0h, Act: %0h", exp_resp, act_resp));
 				end
 				$display("============================================================================================================================");
-			end else begin
+			end if (selection == 10.2) begin
 				`uvm_info("error_full_tx_compare", $sformatf("ERROR-FREE FULL TX FIFO COMPARATIVE"), UVM_LOW)
 				exp_resp = 1'b0;
 				act_resp = trans.resp;
@@ -183,6 +181,7 @@ class uart_scoreboard extends uvm_scoreboard;
 					end else begin
 						`uvm_error(get_type_name(), $sformatf("FAILED! Signal is not matching. Exp: %0b, Act: %0b", exp_FSR, act_FSR));
 					end
+					$display("============================================================================================================================");
 				end
 			end
 		end else if (trans.addr >= 10'h020 && trans.addr <= 10'h3FF) begin
@@ -231,5 +230,17 @@ class uart_scoreboard extends uvm_scoreboard;
 			end
 		end
 	endfunction: write_ahb
+
+	virtual function void compare(logic act_interrupt, logic exp_interrupt);
+				`uvm_info("interrupt_compare", $sformatf("INTERRUPT COMPARATIVE"), UVM_LOW)
+				$display("============================================================================================================================");
+				if (exp_interrupt == act_interrupt) begin
+					`uvm_info(get_type_name(), $sformatf("PASSED! Signal is matching. Exp: %0h, Act: %0h", exp_interrupt, act_interrupt), UVM_LOW);
+				end else begin
+					`uvm_error(get_type_name(), $sformatf("FAILED! Signal is not matching. Exp: %0h, Act: %0h", exp_interrupt, act_interrupt));
+				end
+				$display("============================================================================================================================");
+		
+	endfunction: compare
 
 endclass: uart_scoreboard
