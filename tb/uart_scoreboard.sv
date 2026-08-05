@@ -26,7 +26,7 @@ class uart_scoreboard extends uvm_scoreboard;
 	//             2 - empty_tx         2.1 HIGH  -   2.2 LOW
 	//             3 - full_rx          3.1 LOW   -   3.2 HIGH
 	//             4 - empty_rx	    4.1 HIGH  -   4.2 LOW
-	//             5 - error_parity 
+	//             5 - error_parity     5.1 HIGH  -   5.2 W1C
 	//             6 - normal_parity
 	//             7 - TX transfer
 	//             8 - RX transfer
@@ -129,9 +129,14 @@ class uart_scoreboard extends uvm_scoreboard;
 							exp_FSR = 1'b0;
 							act_FSR = trans.data[4];
 						end
-						5: begin // ERROR PARITY
+						5.1: begin // ERROR PARITY
 							`uvm_info("error_parity_compare", $sformatf("ERROR PARITY COMPARATIVE"), UVM_LOW)
 							exp_FSR = 1'b1;
+							act_FSR = trans.data[4];
+						end
+						5.1: begin // ERROR PARITY
+							`uvm_info("error_parity_compare", $sformatf("ERROR PARITY COMPARATIVE | WRITE 1 TO CLEAR"), UVM_LOW)
+							exp_FSR = 1'b0;
 							act_FSR = trans.data[4];
 						end
 						4.2: begin // EMPTY RX - LOW
@@ -184,7 +189,7 @@ class uart_scoreboard extends uvm_scoreboard;
 					$display("============================================================================================================================");
 				end
 			end
-		end else if (trans.addr >= 10'h020 && trans.addr <= 10'h3FF) begin
+		end else if (trans.addr >= 10'h020 && trans.addr <= 10'h3FF) begin // RESERVED
 			if (trans.xact_type == ahb_transaction::READ) begin
 				`uvm_info("error_reserved_compare", $sformatf("RESERVED RESP COMPARATIVE | READ"), UVM_LOW)
 				exp_resp = 1'b1;

@@ -27,21 +27,21 @@ class error_reserved_test extends uart_base_test;
 		$display("==========================================  ### ERROR HANDLING | RESERVED  ###  ============================================");
 		$display("============================================================================================================================");
 		// WRITE ON RESERVED | RESP = 1
-		repeat (10) begin
+		repeat (248) begin
 			write_reserved_seq.start(env.ahb_agt.seq);
 		end
 		// READ ON RESERVED  | RESP = 1 | RDATA = 32'hFFFF_FFFF
-		repeat (10) begin
+		repeat (248) begin
 			read_reserved_seq.start(env.ahb_agt.seq);
 		end
 		// WRITE ON AVAILBLE RESERVED | RESP = 0
 		env.scb.selection = 9.3;
-		repeat (10) begin
+		repeat (8) begin
 			write_seq.start(env.ahb_agt.seq);
 		end
 		// READ ON AVAILBLE RESERVED | RESP = 0
 		env.scb.selection = 9.4;
-		repeat (10) begin
+		repeat (8) begin
 			read_seq.start(env.ahb_agt.seq);
 		end
 		#500ns;	

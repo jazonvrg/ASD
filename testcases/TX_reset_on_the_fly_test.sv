@@ -23,7 +23,6 @@ class TX_reset_on_the_fly_test extends uart_base_test;
 
 	virtual task run_phase(uvm_phase phase);
 		phase.raise_objection(this);
-		env.scb.selection = 7;
 		reset();
 		seq = uart_sequence::type_id::create("seq");
 		$display("============================================================================================================================");
@@ -39,8 +38,15 @@ class TX_reset_on_the_fly_test extends uart_base_test;
 		wait_monitor(cfg);
 		// RESET ON THE FLY
 		reset();
+		env.scb.selection = 7;
 		run_process();
 		regmodel.TBR.write(status, $urandom_range(0, (1 << cfg.data_width) - 1));
+		do begin
+			regmodel.FSR.read(status, rdata);
+			if (rdata[1] == 1'b0) begin
+				read_limit(cfg);
+			end
+		end while (rdata[1] == 1'b0);
 		wait_time(cfg);
 		phase.drop_objection(this);
 	endtask: run_phase

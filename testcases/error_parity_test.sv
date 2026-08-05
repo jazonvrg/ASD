@@ -30,7 +30,6 @@ class error_parity_test extends uart_base_test;
 
 	virtual task run_phase(uvm_phase phase);
 		phase.raise_objection(this);
-		env.scb.selection = 5;	
 		reset();
 		seq = uart_sequence::type_id::create("seq");
 		foreach(prt_mode[i_prt]) begin
@@ -140,10 +139,17 @@ class error_parity_test extends uart_base_test;
 			if (cfg.parity_mode == uart_configuration::ODD) regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 			else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b1, 1'b1, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
 		end else regmodel.LCR.write(status, {26'h0, 1'b1, 1'b0, 1'b0, 1'(cfg.num_of_stop_bit - 1), 2'(cfg.data_width - 5)});
+		// ERROR
+		env.scb.selection = 5.1;	
 		wait_time(cfg);
 		seq.start(env.uart_agt.seq);
 		wait_monitor(cfg);
 		regmodel.FSR.read(status, rdata);
+		regmodel.RBR.read(status, rdata);
+		// W1C
+		env.scb.selection = 5.2;
+		regmodel.FSR.write(status, {27'h0, 1'b1, 1'b0, 1'b0, 1'b0, 1'b0});
+		wait_monitor(cfg);
 		regmodel.RBR.read(status, rdata);
 	endtask: run_process
 

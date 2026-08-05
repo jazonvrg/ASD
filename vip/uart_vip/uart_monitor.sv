@@ -69,7 +69,7 @@ class uart_monitor extends uvm_monitor;
 			if (uart_vif.tx) begin
 				cnt_HIGH_tx = cnt_HIGH_tx + 1;
 			end
-//			$display("%t: [thread_tx] i = %0d, uart_vif.tx = %0b", $time, i, uart_vif.tx);
+			$display("%t: [thread_tx] i = %0d, uart_vif.tx = %0b", $time, i, uart_vif.tx);
 			baud_period(1);
 		end
 		// PARITY
@@ -93,6 +93,7 @@ class uart_monitor extends uvm_monitor;
 			end
 		endcase	
 		if (cfg.parity_mode != uart_configuration::NONE) begin
+			$display("%t: [thread_tx] PARITY | exp = %0b", $time, exp);
 			act = uart_vif.tx;
 			if (act != exp) begin
 				tx.parity = 1'b1;

@@ -29,7 +29,6 @@ package test_pkg;
 	`include "register_default_value_test.sv"
 	`include "register_read_write_test.sv"
 	`include "register_reset_test.sv"
-	`include "register_reserved_test.sv"
 
 	// TX - 16x
 		// data_width
@@ -127,6 +126,7 @@ package test_pkg;
 		// TX
 	`include "TX_reset_on_the_fly_test.sv"
 		// RX
+	`include "RX_reset_on_the_fly_test.sv"
 
 	// Interrupt
 		// error_parity
